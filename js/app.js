@@ -14,5 +14,7 @@ Project.prototype.toHtml = function () {
     var $newProject = $('article.template').clone();
 
     $newProject.find('h3').text(this.title);
-    $newProject.find('img').attr('src',this.)
+    $newProject.find('img').attr('src',this.image);
+    $newProject.find('p').html(this.desc);
+    $newProject.
 }
