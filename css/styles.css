@@ -4,9 +4,18 @@ body {
     padding: 0;
 }
 
+.project-item {
+    border: 1px black solid;
+    max-width: 200px;
+    min-width: 80px;
+    max-height: 300px;
+    min-height: 120px;
+    margin: 30px;
+    padding: 10px;
+}
 
-article h3 {
-    
+.project-title {
+    font-style:italic;
 }
 
 
