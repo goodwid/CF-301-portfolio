@@ -11,7 +11,7 @@ var rawData = [
         title:      'Pizza 3001',
         projectURL: 'http://goodwid.github.io/CF-201-week2/pizza',
         desc:       'Pizza tracking demo',
-        repoURL:    'https://github.com/goodwid/CF-201-week2/pizza',
+        repoURL:    'https://github.com/goodwid/CF-201-week2/tree/master/pizza',
         image:      '',
         completedOn:'2016-03-25'
     }
