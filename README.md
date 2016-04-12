@@ -8,8 +8,9 @@ Mon Apr 11 15:29:02 PDT 2016
 
 
 
-#### attributions
+#### Attributions
 
 [jQuery UI Touch Punch 0.2.3](http://touchpunch.furf.com/)
+
 
 Copyright 2011–2014, Dave Furfero. Dual licensed under the MIT or GPL Version 2 licenses.
