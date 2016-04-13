@@ -41,7 +41,7 @@ var rawData = [
         desc:       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         repoURL:    '#repo',
         image:      'images/placeholder.jpg',
-        category:   'fake',
+        category:   'unreal',
         completedOn:'2016-03-25'
     },
 ];

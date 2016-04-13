@@ -31,7 +31,7 @@ projectView.handleFilter = function() {
                 return $(this).attr('data-category') == $('#category-filter').val();
             }).show();
         } else {
-            $('#projects article').each(function() {
+            $('#projects article:not(.template)').each(function() {
                 $(this).show();
             });
         }
@@ -39,22 +39,18 @@ projectView.handleFilter = function() {
 };
 
 projectView.handleMainNav = function() {
-    $('nav ul').on('click','.tab', function(event) {
+    $('nav ul').on('click','.tab', function(event) {   // Class needed here to differentiate li elements from other links in the nav bar.
         event.preventDefault();
-        var target = ($(this).find('a').attr('href'));
-        console.log('target = '+ target + '.');
-
-        $('main>section').each(function() {
+        $('main > section').each(function() {
             $(this).hide();
         });
-        $(target).show();
+        $($(this).find('a').attr('href')).show();
     });
 };
-
-
 
 $(document).ready(function() {
     projectView.populateFilter();
     projectView.handleFilter();
     projectView.handleMainNav();
+    $('#about').hide();
 });
