@@ -39,20 +39,15 @@ projectView.handleFilter = function() {
 };
 
 projectView.handleMainNav = function() {
-    $('nav ul').on('click','li', function() {
-        console.log($(this).find('a').attr('href'));
+    $('nav ul').on('click','.tab', function(event) {
+        event.preventDefault();
+        var target = ($(this).find('a').attr('href'));
+        console.log('target = '+ target + '.');
 
-
-
-
-        // $('nav ul').find('a:first').click(function (){
-        //     $('#about').hide();
-        //     $('#projects').show();
-        // });
-        // $('nav ul').find('a:nth-child(2)').click(function (){
-        //     $('#about').show();
-        //     $('#projects').hide();
-        // });
+        $('main>section').each(function() {
+            $(this).hide();
+        });
+        $(target).show();
     });
 };
 
