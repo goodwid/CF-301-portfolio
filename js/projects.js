@@ -19,27 +19,27 @@ var rawData = [
     },
     {
         title:      'Project A',
-        projectURL: '',
+        projectURL: '#project',
         desc:       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        repoURL:    '',
+        repoURL:    '#repo',
         image:      'images/placeholder.jpg',
         category:   'fake',
         completedOn:'2016-03-25'
     },
     {
         title:      'Project B',
-        projectURL: '',
+        projectURL: '#project',
         desc:       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        repoURL:    '',
+        repoURL:    '#repo',
         image:      'images/placeholder.jpg',
         category:   'fake',
         completedOn:'2016-03-25'
     },
     {
         title:      'Project C',
-        projectURL: '',
+        projectURL: '#project',
         desc:       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        repoURL:    '',
+        repoURL:    '#repo',
         image:      'images/placeholder.jpg',
         category:   'fake',
         completedOn:'2016-03-25'

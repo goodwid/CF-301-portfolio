@@ -14,13 +14,13 @@ function Project (opts) {
 Project.prototype.toHtml = function() {
     var $newProject = $('article.template').clone();
 
-    $newProject.find('.project-title').text(this.title);
+    $newProject.find('h3').text(this.title);
     $newProject.attr('data-category', this.category);
-    $newProject.find('.project-image').attr('src',this.image);
-    $newProject.find('.project-desc').html(this.desc);
-    $newProject.find('.repo-url').attr('href',this.repoURL);
-    $newProject.find('.project-url').attr('href',this.projectURL);
-    $newProject.find('.project-date').text(this.completedOn);
+    $newProject.find('img').attr('src',this.image);
+    $newProject.find('p:last').html(this.desc);
+    $newProject.find('a').attr('href',this.projectURL);
+    $newProject.find('p a').attr('href',this.repoURL);
+    $newProject.find('date').text(this.completedOn);
 
     $newProject.removeClass('template');
 
