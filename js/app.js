@@ -8,6 +8,7 @@ function Project (opts) {
     this.repoURL = opts.repoURL;
     this.image = opts.image;
     this.completedOn = opts.completedOn;
+    this.category = opts.category;
 }
 
 Project.prototype.toHtml = function() {
