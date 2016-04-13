@@ -1,8 +1,8 @@
+
 body {
     background-color:  #D0D0D0;
     margin: 0;
     padding: 0;
-    height: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -21,13 +21,13 @@ select {
 #projects {
     display: flex;
     flex-flow: column wrap;
-    height: 80%;
-
+    align-items: center;
 }
 
-.invisible {
-    display: none;
+ul {
+    padding: 0;
 }
+
 
 .content-width {
     width: 80%;
@@ -75,4 +75,37 @@ select {
 
 .template {
     display: none;
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    header {
+        margin-top: .5%;
+        background-color: #FFAAAA;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .content-width {
+        width: 98%;
+    }
+    .nav-item {
+        display: list-item;
+        list-style-type: none;
+        width: 30%;
+
+    }
+
+    select {
+        height: 2em;
+        font-size: 1.1em;
+    }
+
+    .project-item {
+        width: 85%;
+    }
+
+
 }
