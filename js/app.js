@@ -15,6 +15,7 @@ Project.prototype.toHtml = function() {
     var $newProject = $('article.template').clone();
 
     $newProject.find('.project-title').text(this.title);
+    $newProject.attr('data-category', this.category);
     $newProject.find('.project-image').attr('src',this.image);
     $newProject.find('.project-desc').html(this.desc);
     $newProject.find('.repo-url').attr('href',this.repoURL);
@@ -22,7 +23,6 @@ Project.prototype.toHtml = function() {
     $newProject.find('.project-date').text(this.completedOn);
 
     $newProject.removeClass('template');
-    $newProject.draggable();
 
     return $newProject;
 };

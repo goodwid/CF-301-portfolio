@@ -9,12 +9,12 @@ body {
 }
 
 header {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #projects {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     height: 80%;
 }
 
@@ -42,14 +42,11 @@ header {
     background-color: white;
 }
 .project-item {
-    max-width: 200px;
-    min-width: 80px;
-    max-height: 300px;
-    min-height: 80px;
-    /*width: 300px;
-    height: 300px;*/
-    margin: 30px;
+    max-width: 60%;
+    min-width: 18%;
+    margin: 1%;
     padding: 10px;
+    overflow: visible;
 }
 
 .project-title {
@@ -58,6 +55,12 @@ header {
 
 .nav-item {
     display: inline;
+    background-color: #999999;
+    padding: 8px 40px;
+}
+
+.nav-link {
+    text-decoration: none;
 
 }
 
