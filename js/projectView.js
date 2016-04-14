@@ -5,7 +5,7 @@ var projectView = {};
 projectView.populateFilter = function() {
     var cats = [];
     var category;
-    optionTag = '';
+    var optionTag = '';
     $('article').each(function () {
         if (!$(this).hasClass('template')) {
             category = $(this).attr('data-category');
