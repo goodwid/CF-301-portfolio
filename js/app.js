@@ -12,19 +12,12 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-
-  $newProject.find('h3').text(this.title);
-  $newProject.attr('data-category', this.category);
-  $newProject.find('img').attr('src',this.image);
-  $newProject.find('p:last').html(this.desc);
-  $newProject.find('a').attr('href',this.projectURL);
-  $newProject.find('p a').attr('href',this.repoURL);
-  $newProject.find('date').text(this.completedOn);
-
-  $newProject.removeClass('template');
-
-  return $newProject;
+  var appTemplate = $('#project-template').html();
+  var compileTemplate = Handlebars.compile(appTemplate);
+  var html = compileTemplate(this);
+  this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
+  this.completedStatus = this.completedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  return html;
 };
 
 rawData.forEach(function(ele) {
