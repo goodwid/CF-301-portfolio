@@ -6,6 +6,17 @@
     <title>David Goodwin, Web Developer</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <script id="project-template" type="text/x-handlebar-template">
+      <article class="project-item bg-color-white shadow" data-category="{{category}}">
+        <h3>{{title}}</h3>
+        <p>
+          <a href="{{repoURL}}">Repository</a>,
+          completed on <time pubdate datetime="{{completedOn}}">{{completedOn}}</time>
+        </p>
+        <a href="{{projectURL}}"><img src="{{image}}"></a>
+        <p>{{desc}}</p>
+      </article>
+    </script>
 
   </head>
   <body>
