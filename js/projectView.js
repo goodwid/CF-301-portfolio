@@ -3,20 +3,19 @@
 var projectView = {};
 
 projectView.populateFilter = function() {
-  var cats = [];
-  var category;
+  var val = {
+    data: ''
+  };
   var optionTag = '';
+  var appTemplate = $('#selector-template').html();
+  var compileTemplate = Handlebars.compile(appTemplate);
+
   $('article').each(function () {
-    if (!$(this).hasClass('template')) {
-      category = $(this).attr('data-category');
-      if (cats.indexOf(category) === -1) {  // Only add to categories array if it's not already in there.
-        cats.push(category);
-      }
+    val.data = $(this).attr('data-category');
+    optionTag = compileTemplate(val);
+    if ($('#category-filter option[value="' + val.data + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
     }
-  });
-  cats.forEach(function (val) {
-    optionTag = '<option value="' + val + '">' + val + '</option>';
-    $('#category-filter').append(optionTag);
   });
 };
 
@@ -31,7 +30,7 @@ projectView.handleFilter = function() {
         return $(this).attr('data-category') == $('#category-filter').val();
       }).show();
     } else {
-      $('#projects article:not(.template)').each(function() {
+      $('#projects article').each(function() {
         $(this).show();
       });
     }
