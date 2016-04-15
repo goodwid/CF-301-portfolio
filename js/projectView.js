@@ -44,6 +44,12 @@ projectView.handleMainNav = function() {
       $(this).hide();
     });
     $($(this).find('a').attr('href')).show();
+
+    if ($(this).find('a').attr('href') === '#about') {
+      $('header p').css('opacity','0');
+    } else {
+      $('header p').css('opacity','1');
+    }
   });
 };
 
