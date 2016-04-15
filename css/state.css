@@ -1,3 +1,9 @@
+@media only screen and (min-width: 625px) {
+  nav ul {
+    display: block !important;
+  }
+}
+
 @media only screen and (max-width: 625px) {
   header {
     margin-top: .5%;
@@ -43,7 +49,7 @@
     display: none;
   }
 
-  .main-nav:hover ul {
+  /*.main-nav:hover ul {
     display: block;
-  }
+  }*/
 }

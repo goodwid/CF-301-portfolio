@@ -44,6 +44,21 @@ projectView.handleMainNav = function() {
       $(this).hide();
     });
     $($(this).find('a').attr('href')).show();
+
+    if ($(this).find('a').attr('href') === '#about') {
+      $('header p').css('opacity','0');
+    } else {
+      $('header p').css('opacity','1');
+    }
+    if($('.icon-menu').is(':visible')) {
+      $('nav ul').hide();
+    }
+  });
+};
+
+projectView.handleHamburgerClick = function () {
+  $('.icon-menu').on('click', function () {
+    $('nav ul').show();
   });
 };
 
@@ -61,5 +76,6 @@ $(document).ready(function() {
   projectView.handleFilter();
   projectView.handleMainNav();
   projectView.setTeasers();
+  projectView.handleHamburgerClick();
   $('#about').hide();
 });
