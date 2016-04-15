@@ -50,6 +50,15 @@ projectView.handleMainNav = function() {
     } else {
       $('header p').css('opacity','1');
     }
+    if($('.icon-menu').is(':visible')) {
+      $('nav ul').hide();
+    }
+  });
+};
+
+projectView.handleHamburgerClick = function () {
+  $('.icon-menu').on('click', function () {
+    $('nav ul').show();
   });
 };
 
@@ -67,5 +76,6 @@ $(document).ready(function() {
   projectView.handleFilter();
   projectView.handleMainNav();
   projectView.setTeasers();
+  projectView.handleHamburgerClick();
   $('#about').hide();
 });
