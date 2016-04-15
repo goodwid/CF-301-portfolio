@@ -3,54 +3,63 @@
 var projectView = {};
 
 projectView.populateFilter = function() {
-    var cats = [];
-    var category;
-    var optionTag = '';
-    $('article').each(function () {
-        if (!$(this).hasClass('template')) {
-            category = $(this).attr('data-category');
-            if (cats.indexOf(category) === -1) {  // Only add to categories array if it's not already in there.
-                cats.push(category);
-            }
-        }
-    });
-    cats.forEach(function (val) {
-        optionTag = '<option value="' + val + '">' + val + '</option>';
-        $('#category-filter').append(optionTag);
-    });
+  var val = {
+    data: ''
+  };
+  var optionTag = '';
+  var appTemplate = $('#selector-template').html();
+  var compileTemplate = Handlebars.compile(appTemplate);
+
+  $('article').each(function () {
+    val.data = $(this).attr('data-category');
+    optionTag = compileTemplate(val);
+    if ($('#category-filter option[value="' + val.data + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
+    }
+  });
 };
 
 projectView.handleFilter = function() {
-    $('#category-filter').on('change', function() {
-        if ($(this).val()) {
-            $('#projects article').each(function() {
-                $(this).hide();
-            });
+  $('#category-filter').on('change', function() {
+    if ($(this).val()) {
+      $('#projects article').each(function() {
+        $(this).hide();
+      });
 
-            $('#projects article').filter(function() {
-                return $(this).attr('data-category') == $('#category-filter').val();
-            }).show();
-        } else {
-            $('#projects article:not(.template)').each(function() {
-                $(this).show();
-            });
-        }
-    });
+      $('#projects article').filter(function() {
+        return $(this).attr('data-category') == $('#category-filter').val();
+      }).show();
+    } else {
+      $('#projects article').each(function() {
+        $(this).show();
+      });
+    }
+  });
 };
 
 projectView.handleMainNav = function() {
-    $('nav ul').on('click','.tab', function(event) {   // Class needed here to differentiate li elements from other links in the nav bar.
-        event.preventDefault();
-        $('main > section').each(function() {
-            $(this).hide();
-        });
-        $($(this).find('a').attr('href')).show();
+  $('nav ul').on('click','.tab', function(event) {   // Class needed here to differentiate li elements from other links in the nav bar.
+    event.preventDefault();
+    $('main > section').each(function() {
+      $(this).hide();
     });
+    $($(this).find('a').attr('href')).show();
+  });
+};
+
+projectView.setTeasers = function() {
+  $('.desc *:nth-of-type(n+2)').hide();
+  $('#projects').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
+    $(this).parent().find('*').fadeIn();
+    $(this).hide();
+  });
 };
 
 $(document).ready(function() {
-    projectView.populateFilter();
-    projectView.handleFilter();
-    projectView.handleMainNav();
-    $('#about').hide();
+  projectView.populateFilter();
+  projectView.handleFilter();
+  projectView.handleMainNav();
+  projectView.setTeasers();
+  $('#about').hide();
 });
