@@ -47,9 +47,19 @@ projectView.handleMainNav = function() {
   });
 };
 
+projectView.setTeasers = function() {
+  $('.desc *:nth-of-type(n+2)').hide();
+  $('#projects').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
+    $(this).parent().find('*').fadeIn();
+    $(this).hide();
+  });
+};
+
 $(document).ready(function() {
   projectView.populateFilter();
   projectView.handleFilter();
   projectView.handleMainNav();
+  projectView.setTeasers();
   $('#about').hide();
 });

@@ -2,7 +2,7 @@
 body {
   display: flex;
   flex-flow: column;
-  align-items: center
+  align-items: center;
 }
 
 main {
@@ -30,14 +30,13 @@ ul {
 #projects {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
 }
 
 .project-item {
   width: 40%;
   max-width: 250px;
   margin: 1%;
-  padding: 20px 5%;
+  padding: 10px 2.8%;
   overflow: visible;
 }
 
