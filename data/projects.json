@@ -6,7 +6,7 @@
     "image":      "images/placeholder.jpg",
     "category":   "real",
     "completedOn":"2016-04-08",
-    "desc":       "Exposure therapy for people suffering from arachnophobia."
+    "desc":       "Exposure therapy for people suffering from arachnophobia. Users are gradually exposed to more and more graphic imagery of spiders, from hand-drawn circles with lines to cinematic scenes involving spiders."
   },
   {
     "title":      "Pizza 3001",
@@ -15,7 +15,7 @@
     "image":      "images/placeholder.jpg",
     "category":   "real",
     "completedOn":"2016-03-25",
-    "desc":       "Pizza tracking demo",
+    "desc":       "Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.  Tables are dynamically created based on data sets provided."
   },
   {
     "title":      "Project A",
@@ -43,5 +43,5 @@
     "category":   "unreal",
     "completedOn":"2016-03-25",
     "desc":       "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-];
+  }
+]

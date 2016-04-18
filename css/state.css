@@ -20,9 +20,11 @@
     display: inline;
     font-size: 2em;
   }
+
   .main-nav {
     width: 60%;
   }
+
   .nav-item {
     display: list-item;
     list-style-type: none;
@@ -48,8 +50,4 @@
   .main-nav ul {
     display: none;
   }
-
-  /*.main-nav:hover ul {
-    display: block;
-  }*/
 }
