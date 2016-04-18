@@ -41,7 +41,7 @@
     "repoURL":    "",
     "image":      "images/placeholder.jpg",
     "category":   "incomplete",
-    "completedOn":"2016-04-23",
+    "completedOn":"",
     "desc":       "<p>Artist website for my wife.</p><p>Not yet complete, currently occupied by a wordpress template.</p>"
   }
 ]

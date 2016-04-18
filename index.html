@@ -12,10 +12,9 @@
     <link rel="stylesheet" type="text/css" href="css/icons.css">
     <script id="project-template" type="text/x-handlebar-template">
       <article class="project-item shadow" data-category="{{category}}">
-        <h3>{{title}}</h3>
+        <a href="{{repoURL}}" target="_base"><h3>{{title}}</h3></a>
         <p>
-          <a href="{{repoURL}}" target="_base">Repository</a>,
-          completed on <time pubdate datetime="{{completedOn}}">{{completedOn}}</time>
+          {{completedStatus}}
         </p>
         <a href="{{projectURL}}" target="_base"><img src="{{image}}"></a>
         <section class="desc">{{{desc}}}</section>

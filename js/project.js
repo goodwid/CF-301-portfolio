@@ -14,7 +14,7 @@ Project.prototype.toHtml = function() {
   var appTemplate = $('#project-template').html();
   var compileTemplate = Handlebars.compile(appTemplate);
   this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
-  this.completedStatus = this.completedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
   return compileTemplate(this);
 };
 
@@ -36,16 +36,12 @@ Project.fetchAll = function () {
     type: 'HEAD',
     dataType: 'json',
     success: function () {
-      console.log('got here 1.');
       var eTag = jqXHR.getResponseHeader('ETag');
       if ((localStorage.eTag === eTag) && (localStorage.rawData)) {
         Project.loadAll(JSON.parse(localStorage.rawData));
         projectView.initIndexPage();
-        console.log('got here x.');
       } else {
-        console.log('got here 2.');
         $.getJSON(url, function(rawData) {
-          console.log('got here 3. ');
           Project.loadAll(rawData);
           localStorage.rawData = JSON.stringify(rawData);
           localStorage.eTag = eTag;
