@@ -1,7 +1,19 @@
+body {
+  background-color:  #183152;
+  color: #183152;
+}
 
+header {
+  background-color: #C4D7ED;
+}
 select {
   height: 1.7em;
 }
+
+.project-item {
+  background-color: #E1E6FA;
+}
+
 
 .shadow {
   box-shadow:3px 3px 8px black;
