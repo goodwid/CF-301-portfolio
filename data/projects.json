@@ -18,7 +18,7 @@
     "desc":       "<p>Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.</p><p>Tables are dynamically created based on data sets provided.</p><p>Users can also dynamically add additional restaurants and generate new data sets.</p>"
   },
   {
-    "title":      "Bus Mall Market Research",
+    "title":      "Bus Mall",
     "projectURL": "http://goodwid.github.io/CF-201-week3/",
     "repoURL":    "https://github.com/goodwid/CF-201-week3",
     "image":      "images/BusMall.png",

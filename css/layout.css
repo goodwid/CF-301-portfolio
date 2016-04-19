@@ -16,8 +16,9 @@ header {
 }
 
 img {
-  height: 95%;
   width: 95%;
+  height: 95%;
+  max-height: 130px;
 }
 
 ul {
@@ -36,10 +37,10 @@ ul {
   flex-flow: row wrap;
 }
 
-.project-item {
+#projects article {
   width: 40%;
   max-width: 250px;
-  margin: 1%;
+  margin: 20px; 1%;
   padding: 10px 2.8%;
   overflow: visible;
 }
