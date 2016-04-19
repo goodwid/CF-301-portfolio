@@ -71,11 +71,14 @@ projectView.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+projectView.initIndexPage = function() {
+  Project.all.forEach (function(proj) {
+    $('#projects').append(proj.toHtml());
+  });
   projectView.populateFilter();
   projectView.handleFilter();
   projectView.handleMainNav();
   projectView.setTeasers();
   projectView.handleHamburgerClick();
   $('#about').hide();
-});
+};

@@ -11,13 +11,12 @@
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link rel="stylesheet" type="text/css" href="css/icons.css">
     <script id="project-template" type="text/x-handlebar-template">
-      <article class="project-item bg-color-white shadow" data-category="{{category}}">
-        <h3>{{title}}</h3>
+      <article class="project-item shadow" data-category="{{category}}">
+        <a href="{{repoURL}}" target="_base"><h3>{{title}}</h3></a>
         <p>
-          <a href="{{repoURL}}">Repository</a>,
-          completed on <time pubdate datetime="{{completedOn}}">{{completedOn}}</time>
+          {{completedStatus}}
         </p>
-        <a href="{{projectURL}}"><img src="{{image}}"></a>
+        <a href="{{projectURL}}" target="_base"><img src="{{image}}"></a>
         <section class="desc">{{{desc}}}</section>
         <a href="#" class="read-on">Read more &rarr;</a>
       </article>
@@ -36,8 +35,8 @@
         <ul>
           <li class="icon-home tab nav-item"><a class="nav-link" href="#projects">Home</a></li>
           <li class="icon-happy tab nav-item"><a class="nav-link" href="#about">About Me</a></li>
-          <li class="icon-link nav-item"><a class="nav-link" href="">Linked In</a></li>
-          <li class="icon-github nav-item"><a class="nav-link" href="http://github.com/goodwid">Github</a></li>
+          <li class="icon-link nav-item"><a class="nav-link" href="https://www.linkedin.com/in/david-goodwin-35921b4" target="_base">Linked In</a></li>
+          <li class="icon-github nav-item"><a class="nav-link" href="http://github.com/goodwid" target="_base">Github</a></li>
           <li class="icon-link nav-item"><a class="nav-link" href="mailto:goodwid@gmail.com">email</a></li>
         </ul>
       </nav>
@@ -49,12 +48,12 @@
       </p>
     </header>
   <main class="content-width">
-    <section id="projects">
-    </section>
+    <section id="projects"></section>
     <section id="about" class="content-width ">
       <section class="about-content bg-color-white shadow">
         <h2 class="center-content">True Facts About David</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare sem sit amet magna aliquam commodo. Mauris at luctus quam. Curabitur vitae magna pharetra, vulputate purus porta, iaculis lorem. Phasellus nec pharetra lectus. Vestibulum eleifend augue ac diam varius, sed laoreet nisi ullamcorper. Fusce et mi nec eros placerat auctor. Nam interdum nec erat maximus auctor. Fusce neque nunc, tempus sit amet iaculis ac, finibus pulvinar enim. Vestibulum porttitor metus blandit, facilisis metus vel, ullamcorper lacus. Praesent luctus orci a nibh pulvinar tempor. Sed placerat ullamcorper leo in volutpat. Suspendisse posuere ornare vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus dolor nulla, varius sed mi hendrerit, tincidunt aliquet tellus.
+        <p>
+            I have had a career in the support side of IT for 15+ years, doing desktop support for Windows, Linux, UNIX at various points, as well as hardware testing and inbound telephone support. I recently decided to shift over to the development side of the IT world to professionally develop my programming habit. I chose to attend <a href="http://codefellows.org"  target="_base">Codefellows</a> at their Portland campus to get my start in Javascript full stack web development.
         </p>
       </section>
     </section>
@@ -62,8 +61,10 @@
 
   <script src="lib/jquery-2.2.3.min.js"></script>
   <script src="lib/handlebars-latest.js"></script>
-  <script src="js/projects.js"></script>
+  <script src="js/project.js"></script>
   <script src="js/projectView.js"></script>
-  <script src="js/app.js"></script>
+  <script>
+    Project.fetchAll();
+  </script>
   </body>
 </html>
