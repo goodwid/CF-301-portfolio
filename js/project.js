@@ -24,9 +24,14 @@
       return (new Date(b.completedOn)) - (new Date(a.completedOn));
     });
 
-    rawData.forEach(function(ele) {
-      Project.all.push(new Project(ele));
+    // replaced the commented out cude below with:
+    Project.all = rawData.map(function(ele) {
+      return new Project(ele);
     });
+    //
+    // rawData.forEach(function(ele) {
+    //   Project.all.push(new Project(ele));
+    // });
   };
 
   Project.fetchAll = function () {
