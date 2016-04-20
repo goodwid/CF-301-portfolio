@@ -61,7 +61,6 @@ ul {
   padding: 10px 20px;
 }
 
-
-.template, .icon-menu {
+.template, .icon-menu, #about{
   display: none;
 }

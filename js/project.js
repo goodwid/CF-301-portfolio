@@ -1,13 +1,8 @@
 (function(module) {
   function Project (opts) {
-    this.title = opts.title;
-    this.projectURL = opts.projectURL;
-    this.desc = opts.desc;
-    this.repoURL = opts.repoURL;
-    this.image = opts.image;
-    this.completedOn = opts.completedOn;
-    this.category = opts.category;
-    this.codelines = opts.codelines;
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
   }
 
   Project.all = [];
@@ -48,14 +43,19 @@
           Project.loadAll(JSON.parse(localStorage.rawData));
           projectView.initIndexPage();
         } else {
-          $.getJSON(url, function(rawData) {
+          $.getJSON(url)
+          .done(function(rawData) {
             Project.loadAll(rawData);
             localStorage.rawData = JSON.stringify(rawData);
             localStorage.eTag = eTag;
             projectView.initIndexPage();
+          })
+          .fail(function() {
+            console.log('getJSON failed, ');
           });
         }
       }
+
     });
   };
   //
