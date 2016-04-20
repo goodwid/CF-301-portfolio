@@ -12,7 +12,11 @@
     <link rel="stylesheet" type="text/css" href="css/icons.css">
     <script id="project-template" type="text/x-handlebar-template">
       <article class="shadow" data-category="{{category}}" data-code = "{{codelines}}">
-        <a href="{{repoURL}}" target="_base"><h3>{{title}}</h3></a>
+        {{#if repoURL}}
+          <a href="{{repoURL}}" target="_base"><h3>{{title}}</h3></a>
+        {{else}}
+          <h3>{{title}}</h3></a>
+        {{/if}}
         <p>
           {{completedStatus}}
         </p>

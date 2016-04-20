@@ -46,7 +46,7 @@
       $($(this).find('a').attr('href')).fadeIn();
 
       if ($(this).find('a').attr('href') === '#about') {
-        $('header p').css('opacity','0');
+        $('header p').css('opacity','0');   // using opacity becuase hide/show would alter the size of the header, making it jumpy.
       } else {
         $('header p').css('opacity','1');
       }
@@ -71,7 +71,7 @@
     });
   };
 
-
+  // injects the total number of lines of code into the About section.
   projectView.displayLines = function() {
     $('#codelines').text(Project.getLinesOfCode());
   };

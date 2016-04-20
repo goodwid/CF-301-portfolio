@@ -4,7 +4,7 @@
     "projectURL": "http://goodwid.github.io/ExposureTherapy/",
     "repoURL":    "https://github.com/goodwid/ExposureTherapy",
     "image":      "images/ConquerIt.png",
-    "category":   "real",
+    "category":   "completed",
     "completedOn":"2016-04-08",
     "desc":       "<p>Exposure therapy for people suffering from arachnophobia.</p><p>Users are gradually exposed to more and more graphic imagery of spiders, from hand-drawn circles with lines to cinematic scenes involving spiders.</p><p>Progress charts are provided for users to track their progress through the exercises.</p>",
     "codelines": 1900
@@ -14,7 +14,7 @@
     "projectURL": "http://goodwid.github.io/CF-201-week2/pizza/sales-data.html",
     "repoURL":    "https://github.com/goodwid/CF-201-week2/tree/master/pizza/",
     "image":      "images/Pizza3001.jpg",
-    "category":   "real",
+    "category":   "completed",
     "completedOn":"2016-03-25",
     "desc":       "<p>Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.</p><p>Tables are dynamically created based on data sets provided.</p><p>Users can also dynamically add additional restaurants and generate new data sets.</p>",
     "codelines": 669
@@ -24,7 +24,7 @@
     "projectURL": "http://goodwid.github.io/CF-201-week3/",
     "repoURL":    "https://github.com/goodwid/CF-201-week3",
     "image":      "images/BusMall.png",
-    "category":   "real",
+    "category":   "completed",
     "completedOn":"2016-04-01",
     "desc":       "<p>Market research app for a hypothetical catalog company.</p><p>Users are presented with three images and asked to select an image.</p><p>Statistics are logged for each image selection, and state is preserved across page reloads.</p><p>Charts are provided showing overall statistics at the end of the selection process.</p>",
     "codelines": 558
@@ -34,7 +34,7 @@
     "projectURL": "http://goodwid.github.io/CF-201-Week1/",
     "repoURL":    "https://github.com/goodwid/CF-201-Week1",
     "image":      "images/Quiz.png",
-    "category":   "real",
+    "category":   "completed",
     "completedOn":"2016-03-11",
     "desc":       "<p>Users are provided an informational quiz to learn more about me.</p>",
     "codelines": 273
