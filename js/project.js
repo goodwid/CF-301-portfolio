@@ -60,17 +60,12 @@
   };
 
   Project.getLinesOfCode = function () {
-    var x =  Project.all.map(function(proj) {
+    return Project.all.map(function(proj) {
       return proj.codelines;
-    });
-    console.log('x = ', x);
-    var y = x.reduce(function(prev,curr) {
+    })
+    .reduce(function(prev,curr) {
       return prev+curr;
     });
-    console.log('y = ', y);
-    console.log('typeof(x) = ', typeof (x));
-
-    return 42; // sending dummy value to test display function.
   };
 
   module.Project = Project;
