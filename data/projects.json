@@ -6,7 +6,8 @@
     "image":      "images/ConquerIt.png",
     "category":   "real",
     "completedOn":"2016-04-08",
-    "desc":       "<p>Exposure therapy for people suffering from arachnophobia.</p><p>Users are gradually exposed to more and more graphic imagery of spiders, from hand-drawn circles with lines to cinematic scenes involving spiders.</p><p>Progress charts are provided for users to track their progress through the exercises.</p>"
+    "desc":       "<p>Exposure therapy for people suffering from arachnophobia.</p><p>Users are gradually exposed to more and more graphic imagery of spiders, from hand-drawn circles with lines to cinematic scenes involving spiders.</p><p>Progress charts are provided for users to track their progress through the exercises.</p>",
+    "codelines": 1900
   },
   {
     "title":      "Pizza 3001",
@@ -15,7 +16,8 @@
     "image":      "images/Pizza3001.jpg",
     "category":   "real",
     "completedOn":"2016-03-25",
-    "desc":       "<p>Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.</p><p>Tables are dynamically created based on data sets provided.</p><p>Users can also dynamically add additional restaurants and generate new data sets.</p>"
+    "desc":       "<p>Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.</p><p>Tables are dynamically created based on data sets provided.</p><p>Users can also dynamically add additional restaurants and generate new data sets.</p>",
+    "codelines": 669
   },
   {
     "title":      "Bus Mall",
@@ -24,7 +26,8 @@
     "image":      "images/BusMall.png",
     "category":   "real",
     "completedOn":"2016-04-01",
-    "desc":       "<p>Market research app for a hypothetical catalog company.</p><p>Users are presented with three images and asked to select an image.</p><p>Statistics are logged for each image selection, and state is preserved across page reloads.</p><p>Charts are provided showing overall statistics at the end of the selection process.</p>"
+    "desc":       "<p>Market research app for a hypothetical catalog company.</p><p>Users are presented with three images and asked to select an image.</p><p>Statistics are logged for each image selection, and state is preserved across page reloads.</p><p>Charts are provided showing overall statistics at the end of the selection process.</p>",
+    "codelines": 558
   },
   {
     "title":      "Quiz",
@@ -33,7 +36,8 @@
     "image":      "images/Quiz.png",
     "category":   "real",
     "completedOn":"2016-03-11",
-    "desc":       "<p>Users are provided an informational quiz to learn more about me.</p>"
+    "desc":       "<p>Users are provided an informational quiz to learn more about me.</p>",
+    "codelines": 273
   },
   {
     "title":      "Rosselle Studios",
@@ -42,6 +46,7 @@
     "image":      "images/placeholder.jpg",
     "category":   "incomplete",
     "completedOn":"",
-    "desc":       "<p>Artist website for my wife.</p><p>Not yet complete, currently occupied by a wordpress template.</p>"
+    "desc":       "<p>Artist website for my wife.</p><p>Not yet complete, currently occupied by a wordpress template.</p>",
+    "codelines": 611
   }
 ]

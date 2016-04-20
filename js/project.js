@@ -7,6 +7,7 @@
     this.image = opts.image;
     this.completedOn = opts.completedOn;
     this.category = opts.category;
+    this.codelines = opts.codelines;
   }
 
   Project.all = [];
@@ -57,5 +58,19 @@
       }
     });
   };
+
+
+  Project.getLinesofCode = function () {
+    var x =  Project.all.map(function(proj) {
+      return proj.codelines;
+    });
+    console.log('x = ', x);
+    var y = x.reduce(function(prev,curr) {
+      return prev+curr;
+    });
+    console.log('y = ', y);
+    console.log('typeof(x) = ', typeof (x));
+  };
+
   module.Project = Project;
 }(window));
