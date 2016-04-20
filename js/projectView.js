@@ -72,7 +72,7 @@
   };
 
   projectView.initIndexPage = function() {
-    Project.all.forEach (function(proj) {
+    Project.all.map(function(proj) {
       $('#projects').append(proj.toHtml());
     });
     projectView.populateFilter();
