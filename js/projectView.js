@@ -71,6 +71,11 @@
     });
   };
 
+
+  projectView.displayLines = function() {
+    $('#codelines').text(Project.getLinesOfCode());
+  };
+
   projectView.initIndexPage = function() {
     Project.all.map(function(proj) {
       $('#projects').append(proj.toHtml());
@@ -80,8 +85,10 @@
     projectView.handleMainNav();
     projectView.setTeasers();
     projectView.handleHamburgerClick();
+    projectView.displayLines();
     $('#about').hide();
   };
+
 
   module.projectView = projectView;
 }(window));

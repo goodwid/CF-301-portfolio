@@ -59,8 +59,7 @@
     });
   };
 
-
-  Project.getLinesofCode = function () {
+  Project.getLinesOfCode = function () {
     var x =  Project.all.map(function(proj) {
       return proj.codelines;
     });
@@ -70,6 +69,8 @@
     });
     console.log('y = ', y);
     console.log('typeof(x) = ', typeof (x));
+
+    return 42; // sending dummy value to test display function.
   };
 
   module.Project = Project;
