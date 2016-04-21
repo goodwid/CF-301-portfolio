@@ -8,9 +8,8 @@
   }
 
   Project.all = [];
-  Project.categories = [];
 
-  Project.initTemplates = function() {
+  Project.initCategories = function() {
     return Project.all.map(function (obj) {
       return obj.category;
     }).sort().reduce(function(prev,curr) {
@@ -20,7 +19,6 @@
   };
 
   Project.prototype.toHtml = function(template) {
-
     return template(this);
   };
 
