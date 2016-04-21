@@ -2,6 +2,13 @@
 (function(module) {
   var projectView = {};
 
+  projectView.initTemplates = function() {
+    var tileTemplate = $('#tile-template').html();
+    var listTemplate = $('#list-template').html();
+    projectView.filters['tile'] = Handlebars.compile(tileTemplate);
+    projectView.filters['list'] = Handlebars.compile(listTemplate);
+  };
+
   projectView.populateFilter = function() {
     var val = {
       data: ''
@@ -20,15 +27,9 @@
   };
 
   projectView.handleFilter = function() {
+
     $('#category-filter').on('change', function() {
       if ($(this).val()) {
-
-
-
-
-
-
-        
         $('#projects article').each(function() {
           $(this).hide();
         });
@@ -36,14 +37,6 @@
         $('#projects article').filter(function() {
           return $(this).attr('data-category') == $('#category-filter').val();
         }).show();
-
-
-
-
-
-
-
-
       } else {
         $('#projects article').each(function() {
           $(this).show();
@@ -91,10 +84,16 @@
     $('#codelines').text(Project.getLinesOfCode());
   };
 
-  projectView.initIndexPage = function() {
+  projectView.renderProjects = function(format) {
     Project.all.forEach(function(proj) {
-      $('#projects').append(proj.toHtml());
+      $('#projects').append(proj.toHtml(format));
     });
+  };
+
+  projectView.initIndexPage = function() {
+    projectView.filters = {};
+    projectView.initTemplates();
+    projectView.renderProjects(projectView.filters.list);
     projectView.populateFilter();
     projectView.handleFilter();
     projectView.handleMainNav();

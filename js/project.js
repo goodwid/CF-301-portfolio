@@ -3,16 +3,25 @@
     Object.keys(opts).forEach(function(e, index, keys) {
       this[e] = opts[e];
     },this);
+    this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
+    this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
   }
 
   Project.all = [];
+  Project.categories = [];
 
-  Project.prototype.toHtml = function() {
-    var appTemplate = $('#project-template').html();
-    var compileTemplate = Handlebars.compile(appTemplate);
-    this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
-    this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
-    return compileTemplate(this);
+  Project.initTemplates = function() {
+    return Project.all.map(function (obj) {
+      return obj.category;
+    }).sort().reduce(function(prev,curr) {
+      if (curr != prev[0]) prev.unshift(curr);
+      return prev;
+    }, []);
+  };
+
+  Project.prototype.toHtml = function(template) {
+
+    return template(this);
   };
 
   Project.loadAll = function (rawData) {

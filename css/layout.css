@@ -45,6 +45,10 @@ ul {
   overflow: visible;
 }
 
+.list {
+  width: 80%;
+}
+
 .content-width {
   width: 92%;
 }
