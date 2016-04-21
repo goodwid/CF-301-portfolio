@@ -22,6 +22,13 @@
   projectView.handleFilter = function() {
     $('#category-filter').on('change', function() {
       if ($(this).val()) {
+
+
+
+
+
+
+        
         $('#projects article').each(function() {
           $(this).hide();
         });
@@ -29,6 +36,14 @@
         $('#projects article').filter(function() {
           return $(this).attr('data-category') == $('#category-filter').val();
         }).show();
+
+
+
+
+
+
+
+
       } else {
         $('#projects article').each(function() {
           $(this).show();
@@ -38,7 +53,7 @@
   };
 
   projectView.handleMainNav = function() {
-    $('nav ul').on('click','.tab', function(event) {   // Class needed here to differentiate li elements from other links in the nav bar.
+    $('nav ul').on('click','.tab', function(event) {
       event.preventDefault();
       $('main > section').each(function() {
         $(this).hide();
