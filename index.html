@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>David Goodwin, Web Developer</title>
+
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/module.css">
     <link rel="stylesheet" type="text/css" href="css/state.css">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link rel="stylesheet" type="text/css" href="css/icons.css">
+
+
     <script id="project-template" type="text/x-handlebar-template">
       <article class="shadow" data-category="{{category}}" data-code = "{{codelines}}">
         {{#if repoURL}}
@@ -25,35 +29,44 @@
         <a href="#" class="read-on">Read more &rarr;</a>
       </article>
     </script>
+
     <script id="selector-template" type="text/x-handlerbars-template">
       <option value="{{data}}">{{data}}</option>
     </script>
 
   </head>
+
+
   <body>
-    <header class="content-width shadow">
-      <h1 class="center-content">David Goodwin</h1>
-      <h3 class="page-subtitle center-content">Web Developer</h3>
-      <nav class="main-nav center-content">
-        <span class="icon-menu"></span>
-        <ul>
-          <li class="icon-home tab nav-item"><a class="nav-link" href="#projects">Home</a></li>
-          <li class="icon-happy tab nav-item"><a class="nav-link" href="#about">About Me</a></li>
-          <li class="icon-link nav-item"><a class="nav-link" href="https://www.linkedin.com/in/david-goodwin-35921b4" target="_base">Linked In</a></li>
-          <li class="icon-github nav-item"><a class="nav-link" href="http://github.com/goodwid" target="_base">Github</a></li>
-          <li class="icon-link nav-item"><a class="nav-link" href="mailto:goodwid@gmail.com">email</a></li>
-        </ul>
-      </nav>
-      <p class="center-content">
-        Select projects by category:
-        <select id="category-filter">
-          <option value="">-- Filter --</option>
-        </select>
-      </p>
-    </header>
+
+  <header class="content-width shadow">
+    <h1 class="center-content">David Goodwin</h1>
+    <h3 class="page-subtitle center-content">Web Developer</h3>
+    <nav class="main-nav center-content">
+      <span class="icon-menu"></span>
+      <ul>
+        <li class="icon-home tab nav-item"><a class="nav-link" href="#projects">Home</a></li>
+        <li class="icon-happy tab nav-item"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="icon-link nav-item"><a class="nav-link" href="https://www.linkedin.com/in/david-goodwin-35921b4" target="_base">Linked In</a></li>
+        <li class="icon-github nav-item"><a class="nav-link" href="http://github.com/goodwid" target="_base">Github</a></li>
+        <li class="icon-link nav-item"><a class="nav-link" href="mailto:goodwid@gmail.com">email</a></li>
+      </ul>
+    </nav>
+    <p class="center-content">
+      Select projects by category:
+      <select id="category-filter">
+        <option value="">-- Filter --</option>
+      </select>
+    </p>
+  </header>
+
   <main class="content-width">
+
+    <!-- dynamically generated -->
     <section id="projects"></section>
+
     <section id="about" class="content-width ">
+
       <section class="about-content bg-color-white shadow">
         <h2 class="center-content">True Facts About the Programmer</h2>
         <p>
@@ -65,15 +78,19 @@
         </p>
         <p class="center-content">Fun fact:  to date, I have written <span id="codelines"></span> lines of production code!</p>
       </section>
+
     </section>
+
   </main>
 
   <script src="lib/jquery-2.2.3.min.js"></script>
   <script src="lib/handlebars-latest.js"></script>
   <script src="js/project.js"></script>
   <script src="js/projectView.js"></script>
+
   <script>
     Project.fetchAll();
   </script>
+
   </body>
 </html>

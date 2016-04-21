@@ -77,7 +77,7 @@
   };
 
   projectView.initIndexPage = function() {
-    Project.all.map(function(proj) {
+    Project.all.forEach(function(proj) {
       $('#projects').append(proj.toHtml());
     });
     projectView.populateFilter();
