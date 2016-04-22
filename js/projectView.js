@@ -2,6 +2,18 @@
 (function(module) {
   var projectView = {};
 
+  // precompiles the Handlebars templates into an object so that the
+  // .renderProjects method has a choice of which template to use.
+  // Runs once at load.
+  projectView.initTemplates = function() {
+    var tileTemplate = $('#tile-template').html();
+    var listTemplate = $('#list-template').html();
+    projectView.template['tile'] = Handlebars.compile(tileTemplate);
+    projectView.template['list'] = Handlebars.compile(listTemplate);
+  };
+
+  // popualates the filter based on available categories.
+  // Runs once at load.
   projectView.populateFilter = function() {
     var val = {
       data: ''
@@ -10,8 +22,8 @@
     var appTemplate = $('#selector-template').html();
     var compileTemplate = Handlebars.compile(appTemplate);
 
-    $('article').each(function () {
-      val.data = $(this).attr('data-category');
+    projectView.categories.forEach(function (cat) {
+      val.data = cat;
       optionTag = compileTemplate(val);
       if ($('#category-filter option[value="' + val.data + '"]').length === 0) {
         $('#category-filter').append(optionTag);
@@ -19,26 +31,22 @@
     });
   };
 
+  // Handles the selector and radio button changes.
   projectView.handleFilter = function() {
-    $('#category-filter').on('change', function() {
-      if ($(this).val()) {
-        $('#projects article').each(function() {
-          $(this).hide();
-        });
-
-        $('#projects article').filter(function() {
-          return $(this).attr('data-category') == $('#category-filter').val();
-        }).show();
+    $('#selectors').on('change', function() {
+      var category = $('#category-filter').val();
+      var view = $('input[name=view]:checked').val();
+      if (!category) {
+        projectView.renderProjects(projectView.categories,projectView.template[view]);
       } else {
-        $('#projects article').each(function() {
-          $(this).show();
-        });
+        projectView.renderProjects(category,projectView.template[view]);
       }
     });
   };
 
+  // Handles the internal page navigation from the nav bar.
   projectView.handleMainNav = function() {
-    $('nav ul').on('click','.tab', function(event) {   // Class needed here to differentiate li elements from other links in the nav bar.
+    $('nav ul').on('click','.tab', function(event) {
       event.preventDefault();
       $('main > section').each(function() {
         $(this).hide();
@@ -56,12 +64,14 @@
     });
   };
 
+  // hides the menu after clickking on the menu icon.
   projectView.handleHamburgerClick = function () {
     $('.icon-menu').on('click', function () {
       $('nav ul').show();
     });
   };
 
+  // hides the bulk of the description and handles a link to reveal the remainder.
   projectView.setTeasers = function() {
     $('.desc *:nth-of-type(n+2)').hide();
     $('#projects').on('click', 'a.read-on', function(e) {
@@ -76,19 +86,32 @@
     $('#codelines').text(Project.getLinesOfCode());
   };
 
-  projectView.initIndexPage = function() {
-    Project.all.forEach(function(proj) {
-      $('#projects').append(proj.toHtml());
+  // redraws #projects based on the category filter and formatting choices selected by user.
+  projectView.renderProjects = function(categories, format) {
+    $p = $('#projects');
+    $('#projects').off('click', 'a.read-on');   // avoids stacking of event handlers on subsequent renderings.
+    $p.empty();
+    Project.all.filter(function (proj) {
+      return categories.indexOf(proj.category) > -1;
+    })
+    .forEach(function(proj) {
+      $p.append(proj.toHtml(format));
     });
+    projectView.setTeasers();
+  };
+
+  // Initializes the view
+  projectView.initIndexPage = function() {
+    projectView.template = {};
+    projectView.initTemplates();
+    projectView.categories = Project.initCategories();
+    projectView.renderProjects(projectView.categories,projectView.template.tile);
     projectView.populateFilter();
     projectView.handleFilter();
     projectView.handleMainNav();
-    projectView.setTeasers();
     projectView.handleHamburgerClick();
     projectView.displayLines();
-    $('#about').hide();
   };
-
 
   module.projectView = projectView;
 }(window));

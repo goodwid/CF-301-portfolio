@@ -1,35 +1,42 @@
 (function(module) {
+
   function Project (opts) {
     Object.keys(opts).forEach(function(e, index, keys) {
       this[e] = opts[e];
     },this);
+    this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
+    this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
   }
 
   Project.all = [];
 
-  Project.prototype.toHtml = function() {
-    var appTemplate = $('#project-template').html();
-    var compileTemplate = Handlebars.compile(appTemplate);
-    this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
-    this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
-    return compileTemplate(this);
+  // feeds all categories into an array, projectView.categories
+  Project.initCategories = function() {
+    return Project.all.map(function (obj) {
+      return obj.category;
+    }).sort().reduce(function(prev,curr) {
+      if (curr != prev[0]) prev.unshift(curr);
+      return prev;
+    }, []);
   };
 
+  Project.prototype.toHtml = function(template) {
+    return template(this);
+  };
+
+  // sorts data and instantiates Project objects into Project.all array.
   Project.loadAll = function (rawData) {
     rawData.sort(function(a,b) {
       return (new Date(b.completedOn)) - (new Date(a.completedOn));
     });
 
-    // replaced the commented out code below with:
     Project.all = rawData.map(function(ele) {
       return new Project(ele);
     });
-    //
-    // rawData.forEach(function(ele) {
-    //   Project.all.push(new Project(ele));
-    // });
   };
 
+  // The very beginning of programmatic logic.
+  // Reads data from local storage or an AJAX request, then passes control to projectView.
   Project.fetchAll = function () {
     var url = 'data/projects.json';
 
@@ -51,7 +58,7 @@
             projectView.initIndexPage();
           })
           .fail(function() {
-            console.log('getJSON failed, ');
+            console.log('getJSON failed, check JSON format or file presence.');
           });
         }
       }
