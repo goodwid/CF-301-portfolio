@@ -34,16 +34,14 @@
     <script id="list-template" type="text/x-handlebar-template">
       <article class="list" data-category="{{category}}" data-code = "{{codelines}}">
         {{#if repoURL}}
-          <a href="{{repoURL}}" target="_base"><h3>{{title}}</h3></a>
+          <a href="{{repoURL}}" target="_base">{{title}}</a>, <a href="{{projectURL}}" target="_base">Project</a>
         {{else}}
-          <h3>{{title}}</h3></a>
+          <h3>{{title}}</h3></a>, <a href="{{projectURL}}" target="_base">Project</a>
         {{/if}}
-        <p>
           {{completedStatus}}
-        </p>
-        <a href="{{projectURL}}" target="_base">Project</a>
-        <section class="desc">{{{desc}}}</section>
-        <a href="#" class="read-on">Read more &rarr;</a>
+
+        <section class="desc">{{{desc}}}<a href="#" class="read-on">Read more &rarr;</a></section>
+
       </article>
     </script>
 
@@ -69,7 +67,7 @@
         <li class="icon-link nav-item"><a class="nav-link" href="mailto:goodwid@gmail.com">email</a></li>
       </ul>
     </nav>
-    <p class="center-content">
+    <p id="selectors" class="center-content">
       Select projects by category:
       <select id="category-filter">
         <option value="">-- Filter --</option>

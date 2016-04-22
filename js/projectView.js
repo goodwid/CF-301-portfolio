@@ -2,13 +2,18 @@
 (function(module) {
   var projectView = {};
 
+  // precompiles the Handlebars templates into an object so that the
+  // .renderProjects method has a choice of which template to use.
+  // Runs once at load.
   projectView.initTemplates = function() {
     var tileTemplate = $('#tile-template').html();
     var listTemplate = $('#list-template').html();
-    projectView.filters['tile'] = Handlebars.compile(tileTemplate);
-    projectView.filters['list'] = Handlebars.compile(listTemplate);
+    projectView.template['tile'] = Handlebars.compile(tileTemplate);
+    projectView.template['list'] = Handlebars.compile(listTemplate);
   };
 
+  // popualates the filter based on available categories.
+  // Runs once at load.
   projectView.populateFilter = function() {
     var val = {
       data: ''
@@ -26,51 +31,20 @@
     });
   };
 
-  // projectView.generateFilterProcessor = function(category) {
-  //
-  //   return {
-  //     show: function () {
-  //
-  //     },
-  //     hide: function () {
-  //       projectView.categories().filter(function()
-  //     }
-  //   };
-  // };
-
+  // Handles the selector and radio button changes.
   projectView.handleFilter = function() {
-    $('#category-filter').on('change', function() {
+    $('#selectors').on('change', function() {
       var category = $('#category-filter').val();
       var view = $('input[name=view]:checked').val();
       if (!category) {
-        projectView.renderProjects(projectView.categories,projectView.filters[view]);
+        projectView.renderProjects(projectView.categories,projectView.template[view]);
       } else {
-        projectView.renderProjects(category,projectView.filters[view]);
+        projectView.renderProjects(category,projectView.template[view]);
       }
     });
   };
 
-  // projectView.handleFilter = function() {
-  //   $pa = $('#projects article');
-  //
-  //   $('#category-filter').on('change', function() {
-  //     console.log($('input[name=view]:checked').val());
-  //     if ($(this).val()) {
-  //       $pa.each(function() {
-  //         $(this).hide();
-  //       });
-  //
-  //       $pa.filter(function() {
-  //         return $(this).attr('data-category') == $('#category-filter').val();
-  //       }).show();
-  //     } else {
-  //       $pa.each(function() {
-  //         $(this).show();
-  //       });
-  //     }
-  //   });
-  // };
-
+  // Handles the internal page navigation from the nav bar.
   projectView.handleMainNav = function() {
     $('nav ul').on('click','.tab', function(event) {
       event.preventDefault();
@@ -90,12 +64,14 @@
     });
   };
 
+  // hides the menu after clickking on the menu icon.
   projectView.handleHamburgerClick = function () {
     $('.icon-menu').on('click', function () {
       $('nav ul').show();
     });
   };
 
+  // hides the bulk of the description and handles a link to reveal the remainder.
   projectView.setTeasers = function() {
     $('.desc *:nth-of-type(n+2)').hide();
     $('#projects').on('click', 'a.read-on', function(e) {
@@ -110,6 +86,7 @@
     $('#codelines').text(Project.getLinesOfCode());
   };
 
+  // redraws #projects based on the category filter and formatting choices selected by user.
   projectView.renderProjects = function(categories, format) {
     $p = $('#projects');
     $p.empty();
@@ -122,22 +99,18 @@
     projectView.setTeasers();
   };
 
-
-
+  // Initializes the view
   projectView.initIndexPage = function() {
-    projectView.filters = {};
+    projectView.template = {};
     projectView.initTemplates();
     projectView.categories = Project.initCategories();
-    projectView.renderProjects(['completed'],projectView.filters.tile);
+    projectView.renderProjects(projectView.categories,projectView.template.tile);
     projectView.populateFilter();
     projectView.handleFilter();
     projectView.handleMainNav();
     projectView.handleHamburgerClick();
     projectView.displayLines();
-
-    $('#about').hide();
   };
-
 
   module.projectView = projectView;
 }(window));

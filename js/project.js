@@ -1,4 +1,5 @@
 (function(module) {
+
   function Project (opts) {
     Object.keys(opts).forEach(function(e, index, keys) {
       this[e] = opts[e];
@@ -9,6 +10,7 @@
 
   Project.all = [];
 
+  // feeds all categories into an array, projectView.categories
   Project.initCategories = function() {
     return Project.all.map(function (obj) {
       return obj.category;
@@ -22,21 +24,19 @@
     return template(this);
   };
 
+  // sorts data and instantiates Project objects into Project.all array.
   Project.loadAll = function (rawData) {
     rawData.sort(function(a,b) {
       return (new Date(b.completedOn)) - (new Date(a.completedOn));
     });
 
-    // replaced the commented out code below with:
     Project.all = rawData.map(function(ele) {
       return new Project(ele);
     });
-    //
-    // rawData.forEach(function(ele) {
-    //   Project.all.push(new Project(ele));
-    // });
   };
 
+  // The very beginning of programmatic logic.
+  // Reads data from local storage or an AJAX request, then passes control to projectView.
   Project.fetchAll = function () {
     var url = 'data/projects.json';
 
@@ -58,7 +58,7 @@
             projectView.initIndexPage();
           })
           .fail(function() {
-            console.log('getJSON failed, ');
+            console.log('getJSON failed, check JSON format or file presence.');
           });
         }
       }
