@@ -16,9 +16,9 @@
     <script id="tile-template" type="text/x-handlebar-template">
       <article class="tile shadow" data-category="{{category}}" data-code = "{{codelines}}">
         {{#if repoURL}}
-          <a href="{{repoURL}}" target="_base"><h3>{{title}}</h3></a>
+          <h3><a href="{{repoURL}}" target="_base">{{title}}</a></h3>
         {{else}}
-          <h3>{{title}}</h3></a>
+          <h3>{{title}}</h3>
         {{/if}}
         <p>
           {{completedStatus}}
@@ -34,9 +34,9 @@
     <script id="list-template" type="text/x-handlebar-template">
       <article class="list" data-category="{{category}}" data-code = "{{codelines}}">
         {{#if repoURL}}
-          <a href="{{repoURL}}" target="_base">{{title}}</a>, <a href="{{projectURL}}" target="_base">Project</a>
+          <a href="{{repoURL}}" target="_base"><strong>{{title}}</strong></a>, <a href="{{projectURL}}" target="_base">Project</a>
         {{else}}
-          <h3>{{title}}</h3></a>, <a href="{{projectURL}}" target="_base">Project</a>
+          <strong>{{title}}</strong>, <a href="{{projectURL}}" target="_base">Project</a>
         {{/if}}
           {{completedStatus}}
 
