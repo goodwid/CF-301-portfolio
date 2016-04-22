@@ -1,53 +1,81 @@
-function Project (opts) {
-  this.title = opts.title;
-  this.projectURL = opts.projectURL;
-  this.desc = opts.desc;
-  this.repoURL = opts.repoURL;
-  this.image = opts.image;
-  this.completedOn = opts.completedOn;
-  this.category = opts.category;
-}
+(function(module) {
 
-Project.all = [];
+  function Project (opts) {
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
+    this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
+    this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
+  }
 
-Project.prototype.toHtml = function() {
-  var appTemplate = $('#project-template').html();
-  var compileTemplate = Handlebars.compile(appTemplate);
-  this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
-  this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
-  return compileTemplate(this);
-};
+  Project.all = [];
 
-Project.loadAll = function (rawData) {
-  rawData.sort(function(a,b) {
-    return (new Date(b.completedOn)) - (new Date(a.completedOn));
-  });
+  // feeds all categories into an array, projectView.categories
+  Project.initCategories = function() {
+    return Project.all.map(function (obj) {
+      return obj.category;
+    }).sort().reduce(function(prev,curr) {
+      if (curr != prev[0]) prev.unshift(curr);
+      return prev;
+    }, []);
+  };
 
-  rawData.forEach(function(ele) {
-    Project.all.push(new Project(ele));
-  });
-};
+  Project.prototype.toHtml = function(template) {
+    return template(this);
+  };
 
-Project.fetchAll = function () {
-  var url = 'data/projects.json';
+  // sorts data and instantiates Project objects into Project.all array.
+  Project.loadAll = function (rawData) {
+    rawData.sort(function(a,b) {
+      return (new Date(b.completedOn)) - (new Date(a.completedOn));
+    });
 
-  var jqXHR = $.ajax({
-    url: url,
-    type: 'HEAD',
-    dataType: 'json',
-    success: function () {
-      var eTag = jqXHR.getResponseHeader('ETag');
-      if ((localStorage.eTag === eTag) && (localStorage.rawData)) {
-        Project.loadAll(JSON.parse(localStorage.rawData));
-        projectView.initIndexPage();
-      } else {
-        $.getJSON(url, function(rawData) {
-          Project.loadAll(rawData);
-          localStorage.rawData = JSON.stringify(rawData);
-          localStorage.eTag = eTag;
+    Project.all = rawData.map(function(ele) {
+      return new Project(ele);
+    });
+  };
+
+  // The very beginning of programmatic logic.
+  // Reads data from local storage or an AJAX request, then passes control to projectView.
+  Project.fetchAll = function () {
+    var url = 'data/projects.json';
+
+    var jqXHR = $.ajax({
+      url: url,
+      type: 'HEAD',
+      dataType: 'json',
+      success: function () {
+        var eTag = jqXHR.getResponseHeader('ETag');
+        if ((localStorage.eTag === eTag) && (localStorage.rawData)) {
+          Project.loadAll(JSON.parse(localStorage.rawData));
           projectView.initIndexPage();
-        });
+        } else {
+          $.getJSON(url)
+          .done(function(rawData) {
+            Project.loadAll(rawData);
+            localStorage.rawData = JSON.stringify(rawData);
+            localStorage.eTag = eTag;
+            projectView.initIndexPage();
+          })
+          .fail(function() {
+            console.log('getJSON failed, check JSON format or file presence.');
+          });
+        }
       }
-    }
-  });
-};
+
+    });
+  };
+  //
+  // This function calculates the # of lines of code overall from each project
+  //
+  Project.getLinesOfCode = function () {
+    return Project.all.map(function(proj) {
+      return proj.codelines;
+    })
+    .reduce(function(prev,curr) {
+      return prev+curr;
+    });
+  };
+
+  module.Project = Project;
+}(window));

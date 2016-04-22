@@ -10,10 +10,9 @@ select {
   height: 1.7em;
 }
 
-.project-item {
+#projects article {
   background-color: #E1E6FA;
 }
-
 
 .shadow {
   box-shadow:3px 3px 8px black;

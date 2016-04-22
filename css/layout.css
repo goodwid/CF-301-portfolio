@@ -16,15 +16,16 @@ header {
 }
 
 img {
-  height: 95%;
   width: 95%;
+  height: 95%;
+  max-height: 130px;
 }
 
 ul {
   padding: 0;
 }
 
-#about{
+#about  {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,12 +37,20 @@ ul {
   flex-flow: row wrap;
 }
 
-.project-item {
+#projects article {
   width: 40%;
   max-width: 250px;
-  margin: 1%;
+  margin: 20px; 1%;
   padding: 10px 2.8%;
   overflow: visible;
+}
+
+.list {
+  width: 80%;
+  min-width: 80%;
+  margin: 0 1% !important;
+  padding: 0 2.8%;
+  border-bottom: 1px solid black;
 }
 
 .content-width {
@@ -60,7 +69,6 @@ ul {
   padding: 10px 20px;
 }
 
-
-.template, .icon-menu {
+.template, .icon-menu, #about{
   display: none;
 }
