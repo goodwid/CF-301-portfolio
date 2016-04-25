@@ -29,10 +29,11 @@
     rawData.sort(function(a,b) {
       return (new Date(b.completedOn)) - (new Date(a.completedOn));
     });
+    Project.all = rawData.map(ele => new Project(ele));
 
-    Project.all = rawData.map(function(ele) {
-      return new Project(ele);
-    });
+    // Project.all = rawData.map(function(ele) {
+    //   return new Project(ele);
+    // });
   };
 
   // The very beginning of programmatic logic.
