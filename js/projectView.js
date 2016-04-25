@@ -89,7 +89,7 @@
   // redraws #projects based on the category filter and formatting choices selected by user.
   projectView.renderProjects = function(categories, format) {
     $p = $('#projects');
-    $('#projects').off('click', 'a.read-on');   // avoids stacking of event handlers on subsequent renderings.
+    $p.off('click', 'a.read-on');   // avoids stacking of event handlers on subsequent renderings.
     $p.empty();
     Project.all.filter(function (proj) {
       return categories.indexOf(proj.category) > -1;
@@ -108,7 +108,7 @@
     projectView.renderProjects(projectView.categories,projectView.template.tile);
     projectView.populateFilter();
     projectView.handleFilter();
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
     projectView.handleHamburgerClick();
     projectView.displayLines();
   };
