@@ -1,10 +1,12 @@
 body {
   background-color:  #183152;
   color: #183152;
+  font-family: 'Neuton', serif;
 }
 
 header {
   background-color: #C4D7ED;
+  font-family: 'Arimo', sans-serif;
 }
 select {
   height: 1.7em;
