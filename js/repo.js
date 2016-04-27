@@ -5,15 +5,15 @@
 
   repos.requestRepos = function(callback) {
 
-    var url = 'https://api.github.com/user/repos';
-    var authString = 'token '+githubToken;
+    var url = '/github/user/repos';
+    // var authString = 'token '+githubToken;
     var jqXHR = $.ajax({
       url: url,
       type: 'GET',
-      dataType: 'JSON',
-      headers: {
-        "Authorization": authString
-      },
+      dataType: 'JSON'
+      // headers: {
+      //   Authorization: authString
+      // },
     }).done(function(data) {
       repos.all = data;
     }).error (function() {
@@ -29,7 +29,9 @@
   };
 
   repos.owned = function(owner) {
-    return repos.all.filter(repo => repo.owner.login === owner);
+    return repos.all.filter(function (repo) {
+      return repo.owner.login === owner;
+    });
   };
 
   module.repos = repos;

@@ -10,7 +10,7 @@
   repoView.index = function () {
     ui();
     $('#gh-list').append(
-      repos.owned(repoOwner).map(render)
+      repos.owned('goodwid').map(render)
     );
   };
 

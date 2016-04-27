@@ -29,7 +29,9 @@
     rawData.sort(function(a,b) {
       return (new Date(b.completedOn)) - (new Date(a.completedOn));
     });
-    Project.all = rawData.map(ele => new Project(ele));
+    Project.all = rawData.map(function (ele) {
+      return new Project(ele);
+    });
   };
 
   // The very beginning of programmatic logic.
@@ -66,7 +68,9 @@
   // This function calculates the # of lines of code overall from each project
   //
   Project.getLinesOfCode = function () {
-    return Project.all.map(proj => proj.codelines)
+    return Project.all.map(function(proj) {
+      return proj.codelines;
+    })
     .reduce(function(prev,curr) {
       return prev+curr;
     });
