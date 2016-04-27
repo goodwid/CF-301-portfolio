@@ -6,14 +6,10 @@
   repos.requestRepos = function(callback) {
 
     var url = '/github/user/repos';
-    // var authString = 'token '+githubToken;
     var jqXHR = $.ajax({
       url: url,
       type: 'GET',
       dataType: 'JSON'
-      // headers: {
-      //   Authorization: authString
-      // },
     }).done(function(data) {
       repos.all = data;
     }).error (function() {
