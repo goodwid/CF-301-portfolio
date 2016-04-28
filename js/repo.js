@@ -9,13 +9,13 @@
     var jqXHR = $.ajax({
       url: url,
       type: 'GET',
-      dataType: 'JSON'
-    }).done(function(data) {
-      repos.all = data;
-    }).error (function() {
+      dataType: 'JSON',
+      success: function(data) {
+        repos.all = data;
+      }
+    }).done(callback).error (function() {
       console.log('An error occured fetching data from '+url);
     });
-    if (callback) callback();
   };
 
   repos.with = function(attr) {
