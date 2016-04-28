@@ -14,9 +14,9 @@
   Project.initCategories = function() {
     return Project.all.map(function (obj) {
       return obj.category;
-    }).sort().reduce(function(prev,curr) {
-      if (curr != prev[0]) prev.unshift(curr);
-      return prev;
+    }).sort().reduce(function(result,el) {
+      if (el != result[0]) result.unshift(el);
+      return result;
     }, []);
   };
 
