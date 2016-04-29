@@ -1,4 +1,3 @@
-  // 100% hand-retyped from the blog project! w00t!
 (function(module) {
   var projectView = {};
 
@@ -15,19 +14,11 @@
   // popualates the filter based on available categories.
   // Runs once at load.
   projectView.populateFilter = function() {
-    var val = {
-      data: ''
-    };
     var optionTag = '';
-    var appTemplate = $('#selector-template').html();
-    var compileTemplate = Handlebars.compile(appTemplate);
-
+    var template = Handlebars.compile($('#selector-template').html());
     projectView.categories.forEach(function (cat) {
-      val.data = cat;
-      optionTag = compileTemplate(val);
-      if ($('#category-filter option[value="' + val.data + '"]').length === 0) {
-        $('#category-filter').append(optionTag);
-      }
+      optionTag = template({data: cat});
+      $('#category-filter').append(optionTag);
     });
   };
 
@@ -44,27 +35,7 @@
     });
   };
 
-  // Handles the internal page navigation from the nav bar.
-  projectView.handleMainNav = function() {
-    $('nav ul').on('click','.tab', function(event) {
-      event.preventDefault();
-      $('main > section').each(function() {
-        $(this).hide();
-      });
-      $($(this).find('a').attr('href')).fadeIn();
-
-      if ($(this).find('a').attr('href') === '#about') {
-        $('header p').css('opacity','0');   // using opacity becuase hide/show would alter the size of the header, making it jumpy.
-      } else {
-        $('header p').css('opacity','1');
-      }
-      if($('.icon-menu').is(':visible')) {
-        $('nav ul').hide();
-      }
-    });
-  };
-
-  // hides the menu after clickking on the menu icon.
+  // hides the menu after clicking on the menu icon.
   projectView.handleHamburgerClick = function () {
     $('.icon-menu').on('click', function () {
       $('nav ul').show();
@@ -108,7 +79,6 @@
     projectView.renderProjects(projectView.categories,projectView.template.tile);
     projectView.populateFilter();
     projectView.handleFilter();
-    // projectView.handleMainNav();
     projectView.handleHamburgerClick();
     projectView.displayLines();
   };

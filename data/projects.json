@@ -34,7 +34,7 @@
     "projectURL": "http://goodwid.github.io/CF-201-Week1/",
     "repoURL":    "https://github.com/goodwid/CF-201-Week1",
     "image":      "images/Quiz.png",
-    "category":   "completed",
+    "category":   "testing",
     "completedOn":"2016-03-11",
     "desc":       "<p>Users are provided an informational quiz to learn more about me.</p>",
     "codelines": 273
@@ -43,10 +43,10 @@
     "title":      "Rosselle Studios",
     "projectURL": "http://www.rossellestudios.com",
     "repoURL":    "",
-    "image":      "images/placeholder.jpg",
-    "category":   "incomplete",
-    "completedOn":"",
-    "desc":       "<p>Artist website for my wife.</p><p>Not yet complete, currently occupied by a wordpress template.</p>",
-    "codelines": 611
+    "image":      "images/rossellestudios.png",
+    "category":   "testing",
+    "completedOn":"2016-04-28",
+    "desc":       "<p>Artist website for my wife, Andrea Rosselle.</p><p>Presenting images from her current and past art shows in a bespoke jQuery slideshow.</p><p>Users can select image sets by show.</p>",
+    "codelines": 1549
   }
 ]
