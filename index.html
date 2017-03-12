@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>David Goodwin, Web Developer</title>
-
+    <title>David Goodwin, Full Stack Web Developer</title>
+    <!-- SMACCS -->
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/module.css">
@@ -15,10 +15,10 @@
     <link href='https://fonts.googleapis.com/css?family=Arimo:400,700|Neuton:400,400italic,700' rel='stylesheet' type='text/css'>
 
     <script id="repo-template" type="text/x-handlebars-template">
-      <li>
+      <li class="center-content">
         <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
-        <p>Description: {{description}}</p>
-        <p>Language: {{language}}</p>
+        <p>Description: {{description}}<br>
+        Language: {{language}}</p>
         {{#if watchers_count}}
           <p>{{watchers_count}} other users are watching this repo</p>
         {{/if}}
@@ -41,8 +41,6 @@
       </article>
     </script>
 
-
-
     <script id="list-template" type="text/x-handlebar-template">
       <article class="list">
         {{#if repoURL}}
@@ -63,71 +61,73 @@
 
   </head>
 
-
   <body>
-
-  <header class="content-width shadow">
-    <h1 class="center-content">David Goodwin</h1>
-    <h3 class="center-content">Web Developer</h3>
-    <nav class="main-nav center-content">
-      <span class="icon-menu"></span>
-      <ul>
-        <li class="icon-home nav-item"><a class="nav-link" href="projects">Home</a></li>
-        <li class="icon-happy nav-item"><a class="nav-link" href="about">About Me</a></li>
-        <li class="icon-link nav-item"><a class="nav-link" href="https://www.linkedin.com/in/david-goodwin-35921b4" target="_base">Linked In</a></li>
-        <li class="icon-github nav-item"><a class="nav-link" href="http://github.com/goodwid" target="_base">Github</a></li>
-        <li class="icon-link nav-item"><a class="nav-link" href="mailto:goodwid@gmail.com">email</a></li>
-      </ul>
-    </nav>
-    <p id="selectors" class="center-content">
-      Select projects by category:
-      <select id="category-filter">
-        <option value="">-- Filter --</option>
-      </select>
-      Select view:
-      <label>tile</label>
-      <input type="radio" name="view" value="tile" checked>
-      <label>list</label>
-      <input type="radio" name="view" value="list">
-    </p>
-  </header>
-
-  <main class="content-width">
-
-    <!-- dynamically generated -->
-    <section id="projects"></section>
-
-    <section id="about" class="content-width ">
-      <section class="about-content bg-color-white shadow">
-        <h2 class="center-content">True Facts About the Programmer</h2>
-        <p>
-            I have had a career in the support side of IT for 15+ years, doing desktop support for Windows, Linux, UNIX at various points, as well as hardware testing and inbound telephone support. I recently decided to shift over to the development side of the IT world to professionally develop my programming habit. I chose to attend <a href="http://codefellows.org"  target="_base">Codefellows</a> at their Portland campus to get my start in Javascript full stack web development.
-        </p>
-        <h2 class="center-content">Skills</h2>
-        <p>
-          Since March of 2016 I have been focusing on JavaScript development, learning ES5.  I've accumulated a fair number of skills in a short time, including a fair understanding of closures, hoisting, functional and object-oriented programming, and DOM manipulation. I've also become fairly adept at HTML and CSS design.
-        </p>
-        <p class="center-content">Fun fact:  to date, I have written <span id="codelines"></span> lines of production code!</p>
-
-        <h2 class="center-content">Here are all my repos on Github:</h2>
-        <ul id="gh-list">
-          <li>Stuff</li>
+    <header class="content-width shadow">
+      <h1 class="center-content">David Goodwin</h1>
+      <h3 class="center-content">Full Stack Software Developer</h3>
+      <nav class="main-nav center-content">
+        <span class="icon-menu"></span>
+        <ul>
+          <li class="icon-home nav-item"><a class="nav-link" href="projects">Home</a></li>
+          <li class="icon-happy nav-item"><a class="nav-link" href="about">About Me</a></li>
+          <li class="icon-link nav-item"><a class="nav-link" href="https://www.linkedin.com/in/goodwid" target="_base">LinkedIn</a></li>
+          <li class="icon-github nav-item"><a class="nav-link" href="http://github.com/goodwid" target="_base">Github</a></li>
+          <li class="icon-link nav-item"><a class="nav-link" href="mailto:goodwid@gmail.com">email</a></li>
         </ul>
+      </nav>
+      <p id="selectors" class="center-content">
+        Select projects by category:
+        <select id="category-filter">
+          <option value="">-- Filter --</option>
+        </select>
+        Select view:
+        <label>tile</label>
+        <input type="radio" name="view" value="tile" checked>
+        <label>list</label>
+        <input type="radio" name="view" value="list">
+      </p>
+    </header>
 
+    <main class="content-width">
+      <!-- dynamically generated -->
+      <section id="projects"></section>
+      <section id="about" class="content-width ">
+        <section class="about-content bg-color-white shadow">
+          <h2 class="center-content">True Facts About David</h2>
+          <p>
+              I have had a career in the support side of IT for 15+ years, doing desktop support
+              for Windows, Linux, UNIX at various points, as well as hardware testing and inbound
+              telephone support. I recently decided to shift over to the development side of the
+              IT world to professionally develop my programming habit. I chose to attend
+              <a href="http://codefellows.org"  target="_base">Code Fellows</a> at their
+              Portland campus to get my start in Javascript full stack web development.
+          </p>
+          <h2 class="center-content">Skills</h2>
+          <p>
+            Since March of 2016 I have been focusing on JavaScript development, learning ES6.
+            I've accumulated a fair number of skills in a short time, including a fair understanding
+            of closure, hoisting, functional and object-oriented programming, and DOM manipulation.
+            I've also become fairly adept at HTML and CSS design.
+          </p>
+          <p class="center-content">Fun fact:  to date, I have written <span id="codelines"></span> lines of production code!</p>
+
+          <h2 class="center-content">Here are all my repos on Github:</h2>
+          <ul id="gh-list"></ul>
+        </section>
       </section>
-    </section>
 
-  </main>
+    </main>
 
-  <script src="lib/jquery-2.2.3.min.js"></script>
-  <script src="lib/handlebars-latest.js"></script>
-  <script src="lib/page.js"></script>
-  <script src="js/repo.js"></script>
-  <script src="js/repoView.js"></script>
-  <script src="js/project.js"></script>
-  <script src="js/projectView.js"></script>
-  <script src="js/projectController.js"></script>
-  <script src="js/aboutController.js"></script>
-  <script src="js/routes.js"></script>
+    <script src="lib/jquery-2.2.3.min.js"></script>
+    <script src="lib/handlebars-latest.js"></script>
+    <script src="lib/page.js"></script>
+
+    <script src="js/repo.js"></script>
+    <script src="js/repoView.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/projectView.js"></script>
+    <script src="js/projectController.js"></script>
+    <script src="js/aboutController.js"></script>
+    <script src="js/routes.js"></script>
   </body>
 </html>

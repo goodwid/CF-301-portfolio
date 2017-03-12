@@ -68,7 +68,8 @@
   // This function calculates the # of lines of code overall from each project
   //
   Project.getLinesOfCode = function () {
-    return Project.all.map(function(proj) {
+    return Project.all
+    .map(function(proj) {
       return proj.codelines;
     })
     .reduce(function(prev,curr) {
