@@ -4,7 +4,7 @@
     "projectURL": "http://goodwid.github.io/ExposureTherapy/",
     "repoURL":    "https://github.com/goodwid/ExposureTherapy",
     "image":      "images/ConquerIt.png",
-    "category":   "completed",
+    "category":   "classwork",
     "completedOn":"2016-04-08",
     "desc":       "<p>Exposure therapy for people suffering from arachnophobia.</p><p>Users are gradually exposed to more and more graphic imagery of spiders, from hand-drawn circles with lines to cinematic scenes involving spiders.</p><p>Progress charts are provided for users to track their progress through the exercises.</p>",
     "codelines": 1900
@@ -14,7 +14,7 @@
     "projectURL": "http://goodwid.github.io/CF-201-week2/pizza/sales-data.html",
     "repoURL":    "https://github.com/goodwid/CF-201-week2/tree/master/pizza/",
     "image":      "images/Pizza3001.jpg",
-    "category":   "completed",
+    "category":   "classwork",
     "completedOn":"2016-03-25",
     "desc":       "<p>Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.</p><p>Tables are dynamically created based on data sets provided.</p><p>Users can also dynamically add additional restaurants and generate new data sets.</p>",
     "codelines": 669
@@ -24,7 +24,7 @@
     "projectURL": "http://goodwid.github.io/CF-201-week3/",
     "repoURL":    "https://github.com/goodwid/CF-201-week3",
     "image":      "images/BusMall.png",
-    "category":   "completed",
+    "category":   "classwork",
     "completedOn":"2016-04-01",
     "desc":       "<p>Market research app for a hypothetical catalog company.</p><p>Users are presented with three images and asked to select an image.</p><p>Statistics are logged for each image selection, and state is preserved across page reloads.</p><p>Charts are provided showing overall statistics at the end of the selection process.</p>",
     "codelines": 558
@@ -34,17 +34,37 @@
     "projectURL": "http://goodwid.github.io/CF-201-Week1/",
     "repoURL":    "https://github.com/goodwid/CF-201-Week1",
     "image":      "images/Quiz.png",
-    "category":   "testing",
+    "category":   "classwork",
     "completedOn":"2016-03-11",
     "desc":       "<p>Users are provided an informational quiz to learn more about me.</p>",
     "codelines": 273
   },
   {
+    "title":      "Conference Connect",
+    "projectURL": "https://conf-con-cf.herokuapp.com/",
+    "repoURL":    "https://github.com/conference-connect/confcon",
+    "image":      "images/placeholder.jpg",
+    "category":   "classwork",
+    "completedOn":"2016-06-10",
+    "desc":       "<p>Communication and user registration tool for conference organizers.</p>",
+    "codelines": 850
+  },
+  {
+    "title":      "Art House Box Office",
+    "projectURL": "https://ahbo.firebaseapp.com",
+    "repoURL":    "https://github.com/art-house-box-office",
+    "image":      "images/placeholder.jpg",
+    "category":   "classwork",
+    "completedOn":"2016-07-15",
+    "desc":       "<p>Box office analytics for theater owners to make better curatorial decisions.</p><p>Users can see aggregated results and compare national trends against their own theater's performance.</p><p>Login with username 'dave' and password 'dave' to demo.</p>",
+    "codelines": 5304
+  },
+  {
     "title":      "Rosselle Studios",
     "projectURL": "http://www.rossellestudios.com",
-    "repoURL":    "",
+    "repoURL":    "https://github.com/goodwid/rossellestudios",
     "image":      "images/rossellestudios.png",
-    "category":   "testing",
+    "category":   "project",
     "completedOn":"2016-04-28",
     "desc":       "<p>Artist website for my wife, Andrea Rosselle.</p><p>Presenting images from her current and past art shows in a bespoke jQuery slideshow.</p><p>Users can select image sets by show.</p>",
     "codelines": 1549
