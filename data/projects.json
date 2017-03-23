@@ -40,6 +40,16 @@
     "codelines": 273
   },
   {
+    "title":      "Should I Bike it?",
+    "projectURL": "http://final301.herokuapp.com",
+    "repoURL":    "https://github.com/katesowles/301final",
+    "image":      "images/bikeit.png",
+    "category":   "classwork",
+    "completedOn":"2016-05-06",
+    "desc":       "<p>Biker-centric weather app, polls WeatherUnderground API for location-based weather forecasts/updates.</p><p>jQuery MVC single-page app</p>",
+    "codelines": 0
+  },
+  {
     "title":      "Conference Connect",
     "projectURL": "https://conf-con-cf.herokuapp.com/",
     "repoURL":    "https://github.com/conference-connect/confcon",
