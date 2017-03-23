@@ -84,7 +84,7 @@
     "projectURL": "",
     "repoURL":    "https://github.com/goodwid/home-automation",
     "image":      "images/homeautomation.png",
-    "category":   "personal",
+    "category":   "project",
     "completedOn":"2017-03-01",
     "desc":       "<p>Custom home automation server</p><p>MEAN stack app, communicating with ESP8266 devices running Espruino to control household appliances.</p><p>No public access yet.</p>",
     "codelines": 0
