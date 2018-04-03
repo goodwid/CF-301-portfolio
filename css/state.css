@@ -34,17 +34,13 @@
     padding: 2%;
   }
 
-  .nav-item:last-of-type {
-    border-bottom: 1px solid black;
-  }
-
   select {
     height: 2em;
     font-size: 1.1em;
   }
 
-  #projects article {
-    width: 85%;
+  #projects {
+    grid-template-columns: 1fr;
   }
 
   .main-nav ul {

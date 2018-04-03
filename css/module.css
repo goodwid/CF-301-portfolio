@@ -1,11 +1,8 @@
 .nav-item {
-  /*padding: 3px 1em;*/
   display: inline;
-
 }
 
 .nav-link {
-  /*background-color: #E375D81;*/
   padding: 7px 2%;
   border: 1px solid #183152;
   border-radius: 3px;

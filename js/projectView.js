@@ -6,34 +6,32 @@
   // Runs once at load.
   projectView.initTemplates = function() {
     var tileTemplate = $('#tile-template').html();
-    var listTemplate = $('#list-template').html();
     projectView.template['tile'] = Handlebars.compile(tileTemplate);
-    projectView.template['list'] = Handlebars.compile(listTemplate);
   };
 
   // popualates the filter based on available categories.
   // Runs once at load.
-  projectView.populateFilter = function() {
-    var optionTag = '';
-    var template = Handlebars.compile($('#selector-template').html());
-    projectView.categories.forEach(function (cat) {
-      optionTag = template({data: cat});
-      $('#category-filter').append(optionTag);
-    });
-  };
+  // projectView.populateFilter = function() {
+  //   var optionTag = '';
+  //   var template = Handlebars.compile($('#selector-template').html());
+  //   projectView.categories.forEach(function (cat) {
+  //     optionTag = template({data: cat});
+  //     $('#category-filter').append(optionTag);
+  //   });
+  // };
 
-  // Handles the selector and radio button changes.
-  projectView.handleFilter = function() {
-    $('#selectors').on('change', function() {
-      var category = $('#category-filter').val();
-      var view = $('input[name=view]:checked').val();
-      if (!category) {
-        projectView.renderProjects(projectView.categories,projectView.template[view]);
-      } else {
-        projectView.renderProjects(category,projectView.template[view]);
-      }
-    });
-  };
+  // // Handles the selector and radio button changes.
+  // projectView.handleFilter = function() {
+  //   $('#selectors').on('change', function() {
+  //     var category = $('#category-filter').val();
+  //     var view = $('input[name=view]:checked').val();
+  //     if (!category) {
+  //       projectView.renderProjects(projectView.categories,projectView.template[view]);
+  //     } else {
+  //       projectView.renderProjects(category,projectView.template[view]);
+  //     }
+  //   });
+  // };
 
   // hides the menu after clicking on the menu icon.
   projectView.handleHamburgerClick = function () {
@@ -77,8 +75,8 @@
     projectView.initTemplates();
     projectView.categories = Project.initCategories();
     projectView.renderProjects(projectView.categories,projectView.template.tile);
-    projectView.populateFilter();
-    projectView.handleFilter();
+    // projectView.populateFilter();
+    // projectView.handleFilter();
     projectView.handleHamburgerClick();
     projectView.displayLines();
   };

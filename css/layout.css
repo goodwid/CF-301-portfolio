@@ -15,9 +15,22 @@ header {
   margin-top: 20px;
 }
 
+header h1 {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  margin-bottom: 50px;
+}
+
 img {
-  width: 95%;
-  height: 95%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 95%; */
+  /* width: 80%; */
   max-height: 130px;
 }
 
@@ -29,18 +42,21 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95%;
+  /* width: 90%; */
 }
 
 #projects {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  grid-auto-rows: minmax(100px, auto);
+  /* grid-auto-columns: fit-content(400px); */
 }
 
 #projects article {
-  width: 40%;
-  max-width: 250px;
-  margin: 20px; 1%;
+  /* width: 80%; */
+  /* max-width: 250px; */
+  /* margin: 20px; 1%; */
   padding: 10px 2.8%;
   overflow: visible;
 }
@@ -65,11 +81,25 @@ ul {
   margin-top: 20px;
 }
 
+.about-content h2:first-of-type {
+  padding-top: 30px;
+}
+
 .about-content p {
   padding: 10px 20px;
-  /*font-size: 150%;*/
+  width: 60%;
+  margin: auto;
+  font-size: 150%;
+}
+
+.about-content li {
+  font-size: 150%;
 }
 
 .template, .icon-menu, #about{
   display: none;
+}
+
+#gh-list li p {
+  font-size: 80%;
 }

@@ -1,19 +1,31 @@
 body {
-  background-color:  #183152;
-  color: #183152;
-  font-family: 'Neuton', serif;
+  background-color:  #363a3f;
+  color: #164450;
+  font-family: 'Nanum Gothic', sans-serif;
+  /* font-family: 'Neuton', serif; */
 }
 
 header {
-  background-color: #C4D7ED;
-  font-family: 'Arimo', sans-serif;
+  background-color: rgb(176, 181, 187);
+  font-family: 'Nanum Gothic', sans-serif;
+  /* font-family: 'Arimo', sans-serif; */
 }
 select {
   height: 1.7em;
 }
 
 #projects article {
-  background-color: #E1E6FA;
+  background-color: rgb(176, 181, 187);
+}
+
+a {
+  color: #164450;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0c1113;
+  text-decoration: none;
 }
 
 .shadow {

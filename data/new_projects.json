@@ -1,11 +1,11 @@
 
 {
-  "title":      "",
-  "projectURL": "",
+  "title":      "Four Gates Maine",
+  "projectURL": "http://fourgatesmaine.com",
   "repoURL":    "",
-  "image":      "",
-  "category":   "",
-  "completedOn":"",
-  "desc":       "",
+  "image":      "fourgates.jpg",
+  "category":   "project",
+  "completedOn":"2018-03-01",
+  "desc":       "<p>Business website for private acupuncture practice.</p><p>Wordpress site built with Divi theme.</p>",
   "codelines": 0
 }
