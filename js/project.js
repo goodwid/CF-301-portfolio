@@ -1,11 +1,13 @@
+/* globals projectView */
+
 (function(module) {
 
   function Project (opts) {
     Object.keys(opts).forEach(function(e, index, keys) {
       this[e] = opts[e];
-    },this);
+    }, this);
     this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
-    this.completedStatus = this.completedOn ? 'completed ' + this.daysAgo + ' days ago' : '(incomplete)';
+    this.completedStatus = this.completedOn ? `completed ${this.daysAgo} days ago` : '(incomplete)';
   }
 
   Project.all = [];
