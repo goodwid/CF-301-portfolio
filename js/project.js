@@ -1,18 +1,17 @@
 /* globals projectView */
 
 (function(module) {
-
-  function Project (opts) {
-    Object.keys(opts).forEach(e => this[e] = opts[e]);
-    this.daysAgo = parseInt((new Date() - new Date(this.completedOn))/60/60/24/1000);
-    this.completedStatus = this.completedOn ? `completed ${this.daysAgo} days ago` : '(incomplete)';
-  }
+  
+  class Project {
+    constructor (opts) {
+      Object.keys(opts).forEach(e => this[e] = opts[e]);
+    }
+    toHtml(template) {
+      return template(this);
+    }
+  };
 
   Project.all = [];
-
-  Project.prototype.toHtml = function(template) {
-    return template(this);
-  };
 
   // sorts data and instantiates Project objects into Project.all array.
   Project.loadAll = function (rawData) {

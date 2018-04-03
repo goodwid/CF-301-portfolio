@@ -26,9 +26,9 @@
 
   // redraws #projects based on the category filter and formatting choices selected by user.
   projectView.renderProjects = function() {
-    $p = $('#projects');
-    $p.off('click', 'a.read-on');   // avoids stacking of event handlers on subsequent renderings.
-    $p.empty();
+    const $p = $('#projects');
+    // $p.off('click', 'a.read-on');   // avoids stacking of event handlers on subsequent renderings.
+    // $p.empty();
     Project.all.forEach(proj => {
       $p.append(proj.toHtml(projectView.template));
     });
