@@ -1,12 +1,13 @@
 {
   "name": "Goodwin-Portfolio",
-  "version": "0.1.0",
-  "description": "As we now complete our MVC conversation, we can refactor our app to use good MVC separation of concerns.",
+  "version": "1.1.0",
+  "description": "Portfolio for David Goodwin",
   "main": "server.js",
   "scripts": {
+    "start":"node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Code Fellows",
+  "author": "David Goodwin",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3",

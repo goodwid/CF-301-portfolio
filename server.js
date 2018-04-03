@@ -1,9 +1,9 @@
-var requestProxy = require('express-request-proxy'),
-  express = require('express'),
-  port = process.env.PORT || 8080,
-  app = express();
+const requestProxy = require('express-request-proxy');
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
 
-var proxyGitHub = function(request, response) {
+const proxyGitHub = function(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
   (requestProxy({
     url: 'https://api.github.com/' + request.params[0],
@@ -15,11 +15,9 @@ app.get('/github/*', proxyGitHub);
 
 app.use(express.static('./'));
 
-app.get('*', function(request, response) {
-  console.log('New request:', request.url);
-  response.sendFile('index.html', { root: '.' });
+app.get('*', (req, res) => {
+  console.log('New request:', req.url);
+  res.sendFile('index.html', { root: '.' });
 });
 
-app.listen(port, function() {
-  console.log('Server started on port ' + port + '!');
-});
+app.listen(port, () => console.log(`Server started on port ${port}`));
