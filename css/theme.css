@@ -2,13 +2,11 @@ body {
   background-color:  #363a3f;
   color: #164450;
   font-family: 'Nanum Gothic', sans-serif;
-  /* font-family: 'Neuton', serif; */
 }
 
 header, footer{
   background-color: rgb(176, 181, 187);
   font-family: 'Nanum Gothic', sans-serif;
-  /* font-family: 'Arimo', sans-serif; */
 }
 
 select {

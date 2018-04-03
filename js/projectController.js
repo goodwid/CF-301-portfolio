@@ -1,7 +1,7 @@
 (function(module) {
   var projectController = {};
 
-  Project.fetchAll();
+  Project.fetchAll(projectView.initIndexPage);
 
   projectController.index = function() {
     $('main > section').hide();

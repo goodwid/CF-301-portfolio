@@ -6,8 +6,7 @@
     "image":      "images/ConquerIt.png",
     "category":   "classwork",
     "completedOn":"2016-04-08",
-    "desc":       "<p>Exposure therapy for people suffering from arachnophobia.</p><p>Users are gradually exposed to more and more graphic imagery of spiders, from hand-drawn circles with lines to cinematic scenes involving spiders.</p><p>Progress charts are provided for users to track their progress through the exercises.</p>",
-    "codelines": 1900
+    "desc":       "<p>Exposure therapy for people suffering from arachnophobia.</p><p>Users are gradually exposed to more and more graphic imagery of spiders, from hand-drawn circles with lines to cinematic scenes involving spiders.</p><p>Progress charts are provided for users to track their progress through the exercises.</p>"
   },
   {
     "title":      "Pizza 3001",
@@ -16,8 +15,7 @@
     "image":      "images/Pizza3001.jpg",
     "category":   "classwork",
     "completedOn":"2016-03-25",
-    "desc":       "<p>Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.</p><p>Tables are dynamically created based on data sets provided.</p><p>Users can also dynamically add additional restaurants and generate new data sets.</p>",
-    "codelines": 669
+    "desc":       "<p>Tracking number of drivers needed for a hypothetical pizza chain, based on randomly generated data.</p><p>Tables are dynamically created based on data sets provided.</p><p>Users can also dynamically add additional restaurants and generate new data sets.</p>"
   },
   {
     "title":      "Bus Mall",
@@ -26,8 +24,7 @@
     "image":      "images/BusMall.png",
     "category":   "classwork",
     "completedOn":"2016-04-01",
-    "desc":       "<p>Market research app for a hypothetical catalog company.</p><p>Users are presented with three images and asked to select an image.</p><p>Statistics are logged for each image selection, and state is preserved across page reloads.</p><p>Charts are provided showing overall statistics at the end of the selection process.</p>",
-    "codelines": 558
+    "desc":       "<p>Market research app for a hypothetical catalog company.</p><p>Users are presented with three images and asked to select an image.</p><p>Statistics are logged for each image selection, and state is preserved across page reloads.</p><p>Charts are provided showing overall statistics at the end of the selection process.</p>"
   },
   {
     "title":      "Quiz",
@@ -36,8 +33,7 @@
     "image":      "images/Quiz.png",
     "category":   "classwork",
     "completedOn":"2016-03-11",
-    "desc":       "<p>Users are provided an informational quiz to learn more about me.</p>",
-    "codelines": 273
+    "desc":       "<p>Users are provided an informational quiz to learn more about me.</p>"
   },
   {
     "title":      "Should I Bike it?",
@@ -46,8 +42,7 @@
     "image":      "images/bikeit.png",
     "category":   "classwork",
     "completedOn":"2016-05-06",
-    "desc":       "<p>Biker-centric weather app, polls WeatherUnderground API for location-based weather forecasts/updates.</p><p>jQuery MVC single-page app</p>",
-    "codelines": 0
+    "desc":       "<p>Biker-centric weather app, polls WeatherUnderground API for location-based weather forecasts/updates.</p><p>jQuery MVC single-page app</p>"
   },
   {
     "title":      "Conference Connect",
@@ -56,8 +51,7 @@
     "image":      "images/confcon.png",
     "category":   "classwork",
     "completedOn":"2016-06-10",
-    "desc":       "<p>Communication and user registration tool for conference organizers.</p><p>Express, Mongoose, Node back end, jQuery MVC on front end.  Login with username 'dave' and password 'dave' to demo.</p>",
-    "codelines": 850
+    "desc":       "<p>Communication and user registration tool for conference organizers.</p><p>Express, Mongoose, Node back end, jQuery MVC on front end.  Login with username 'dave' and password 'dave' to demo.</p>"
   },
   {
     "title":      "Art House Box Office",
@@ -66,8 +60,7 @@
     "image":      "images/ahbo.png",
     "category":   "classwork",
     "completedOn":"2016-07-15",
-    "desc":       "<p>Box office analytics for theater owners to make better curatorial decisions.</p><p>Users can see aggregated results and compare national trends against their own theater's performance.</p><p>Full MEAN stack app. Login with username 'dave' and password 'dave' to demo.</p>",
-    "codelines": 5304
+    "desc":       "<p>Box office analytics for theater owners to make better curatorial decisions.</p><p>Users can see aggregated results and compare national trends against their own theater's performance.</p><p>Full MEAN stack app. Login with username 'dave' and password 'dave' to demo.</p>"
   },
   {
     "title":      "Rosselle Studios",
@@ -76,8 +69,7 @@
     "image":      "images/rossellestudios.png",
     "category":   "project",
     "completedOn":"2016-04-28",
-    "desc":       "<p>Artist website for my wife, Andrea Rosselle.</p><p>Presenting images from her current and past art shows in a custom jQuery MVC slideshow.</p><p>Users can select image sets by show.</p>",
-    "codelines": 1549
+    "desc":       "<p>Artist website for my wife, Andrea Rosselle.</p><p>Presenting images from her current and past art shows in a custom jQuery MVC slideshow.</p><p>Users can select image sets by show.</p>"
   },
   {
     "title":      "Adventure Game",
@@ -86,8 +78,7 @@
     "image":      "images/adventure.png",
     "category":   "classwork",
     "completedOn":"2016-07-01",
-    "desc":       "<p>Classic adventure game.</p><p>Explore the house, find the tools, fight the monster, win the game.</p><p>Angular front end, vanilla JS for the game mechanics.</p>",
-    "codelines": 866
+    "desc":       "<p>Classic adventure game.</p><p>Explore the house, find the tools, fight the monster, win the game.</p><p>Angular front end, vanilla JS for the game mechanics.</p>"
   },
   {
     "title":      "Home Automation",
@@ -96,8 +87,7 @@
     "image":      "images/homeautomation.png",
     "category":   "project",
     "completedOn":"2017-03-01",
-    "desc":       "<p>Custom home automation server</p><p>MEAN stack app, communicating with ESP8266 devices running Espruino to control household appliances.</p><p>No public access yet.</p>",
-    "codelines": 0
+    "desc":       "<p>Custom home automation server</p><p>MEAN stack app, communicating with ESP8266 devices running Espruino to control household appliances.</p><p>No public access yet.</p>"
   },
   {
     "title":      "Piecing Me Together",
@@ -106,8 +96,7 @@
     "image":      "images/piecing.jpg",
     "category":   "project",
     "completedOn":"2017-10-09",
-    "desc":       "<p>Custom image gallery for a faculty community project in response to a summer book reading.</p><p>MVC design with jQuery and page.js.</p>",
-    "codelines": 340
+    "desc":       "<p>Custom image gallery for a faculty community project in response to a summer book reading.</p><p>MVC design with jQuery and page.js.</p>"
   },
   {
     "title":      "Four Gates Maine",
@@ -116,8 +105,7 @@
     "image":      "images/fourgates.jpg",
     "category":   "project",
     "completedOn":"2018-03-01",
-    "desc":       "<p>Business website for private acupuncture practice.</p><p>Wordpress site built with Divi theme.</p>",
-    "codelines": 0
+    "desc":       "<p>Business website for private acupuncture practice.</p><p>Wordpress site built with Divi theme.</p>"
   }
 
 ]
