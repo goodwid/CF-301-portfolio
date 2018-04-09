@@ -47,6 +47,7 @@ ul {
   align-items: center;
   /* width: 90%; */
 }
+
 #bio {
   text-align: left;
 }
@@ -85,6 +86,7 @@ ul {
 
 .about-content {
   margin-top: 20px;
+  padding-bottom: 40px;
 }
 
 .about-content h2:first-of-type {
@@ -93,7 +95,7 @@ ul {
 
 .about-content p {
   padding: 10px 20px;
-  width: 60%;
+  width: 80%;
   margin: auto;
   font-size: 150%;
 }

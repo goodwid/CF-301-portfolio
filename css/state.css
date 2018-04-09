@@ -22,7 +22,7 @@
   }
 
   .main-nav {
-    width: 60%;
+    width: 40%;
   }
 
   .nav-item {
@@ -31,7 +31,11 @@
     width: 94%;
     border-radius: 0px;
     border-bottom: none;
-    padding: 2%;
+    padding: 2px 0;
+  }
+  
+  .nav-link {
+    display: block;
   }
 
   select {
