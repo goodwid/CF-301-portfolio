@@ -4,7 +4,27 @@
   }
 }
 
+@media only screen and (min-width: 626px) and (max-width: 900px) {
+  #projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 3em !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 @media only screen and (max-width: 625px) {
+  h1 {
+    font-size: 2em !important;
+  }
+
   header {
     margin-top: .5%;
     display: flex;
