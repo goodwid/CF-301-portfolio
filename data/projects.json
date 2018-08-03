@@ -24,7 +24,7 @@
     "image":      "images/ahbo.png",
     "category":   "classwork",
     "order":      "15",
-    "desc":       "<p>Box office analytics for theater owners to make better curatorial decisions.</p><p>Users can see aggregated results and compare national trends against their own theater's performance.</p><p>Full MEAN stack app. Login with username 'dave' and password 'dave' to demo.</p>"
+    "desc":       "<p>Box office analytics for theater owners. Users see aggregated results to compare national and personal trends.</p><p>Full MEAN stack app. Login with username ‘dave’ and password ‘dave’ to demo.</p>"
   },
   {
     "title":      "Rosselle Studios",

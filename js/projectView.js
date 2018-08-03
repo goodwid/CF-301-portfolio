@@ -14,23 +14,12 @@
     $('.icon-menu').on('click', () => $('nav ul').show());
   };
 
-  // hides the bulk of the description and handles a link to reveal the remainder.
-  projectView.setTeasers = function() {
-    $('.desc *:nth-of-type(n+2)').hide();
-    $('#projects').on('click', 'a.read-on', function(e) {
-      e.preventDefault();
-      $(this).parent().find('*').fadeIn();
-      $(this).hide();
-    });
-  };
-
   // redraws #projects based on the category filter and formatting choices selected by user.
   projectView.renderProjects = function() {
     const $p = $('#projects');
     Project.all.forEach(proj => {
       $p.append(proj.toHtml(projectView.template));
     });
-    projectView.setTeasers();
   };
 
   // Initializes the view
