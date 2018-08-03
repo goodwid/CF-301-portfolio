@@ -2,7 +2,6 @@
 <html lang="en">
 
   <head>
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96111715-2"></script>
     <script>
@@ -24,17 +23,7 @@
     <link rel="stylesheet" type="text/css" href="css/state.css">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-    <script id="repo-template" type="text/x-handlebars-template">
-      <li class="center-content">
-        <a href="{{html_url}}" target="_blank"><h5>{{name}}</h5></a>
-        <p>Description: {{description}}<br>
-        Language: {{language}}</p>
-        {{#if watchers_count}}
-          <p>{{watchers_count}} other users are watching this repo</p>
-        {{/if}}
-      </li>
-    </script>
-
+   
     <script id="project-template" type="text/x-handlebar-template">
       <article class="shadow">
         {{#if repoURL}}
@@ -114,8 +103,6 @@
     <script src="lib/handlebars-latest.js"></script>
     <script src="lib/page.js"></script>
 
-    <script src="js/repo.js"></script>
-    <script src="js/repoView.js"></script>
     <script src="js/project.js"></script>
     <script src="js/projectView.js"></script>
     <script src="js/projectController.js"></script>

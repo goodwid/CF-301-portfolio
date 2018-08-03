@@ -1,3 +1,5 @@
+/* globals Project projectView */
+
 (function(module) {
   var projectController = {};
 

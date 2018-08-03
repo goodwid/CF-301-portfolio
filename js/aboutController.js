@@ -1,4 +1,3 @@
-/* globals repos repoView */
 
 (function(module) {
   const aboutController = {};
@@ -10,7 +9,6 @@
     if($('.icon-menu').is(':visible')) {
       $('nav ul').hide();
     }
-    repos.requestRepos(repoView.index);
   };
 
   module.aboutController = aboutController;

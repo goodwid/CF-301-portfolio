@@ -9,7 +9,10 @@
     toHtml(template) {
       return template(this);
     }
-  };
+    loadAll(rawData) {
+      
+    }
+  }
 
   Project.all = [];
 
