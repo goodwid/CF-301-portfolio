@@ -5,8 +5,8 @@
   // .renderProjects method has a choice of which template to use.
   // Runs once at load.
   projectView.initTemplate = function() {
-    const tileTemplate = $('#tile-template').html();
-    projectView.template = Handlebars.compile(tileTemplate);
+    const template = $('#project-template').html();
+    projectView.template = Handlebars.compile(template);
   };
 
   // hides the menu after clicking on the menu icon.

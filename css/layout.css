@@ -61,11 +61,15 @@ ul {
 }
 
 #projects article {
-  /* width: 80%; */
-  /* max-width: 250px; */
-  /* margin: 20px; 1%; */
   padding: 10px 2.8%;
   overflow: visible;
+}
+
+#projects article h5 {
+  font-size: .7em;
+  margin: -30px 30px 8px 0;
+  text-align: right;
+
 }
 
 .list {

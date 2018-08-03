@@ -35,13 +35,14 @@
       </li>
     </script>
 
-    <script id="tile-template" type="text/x-handlebar-template">
-      <article class="tile shadow">
+    <script id="project-template" type="text/x-handlebar-template">
+      <article class="shadow">
         {{#if repoURL}}
           <h3><a href="{{repoURL}}" target="_base">{{title}}</a></h3>
         {{else}}
           <h3>{{title}}</h3>
         {{/if}}
+        <h5>{{category}}</h5>
         <a href="{{projectURL}}" target="_base"><img src="{{image}}"></a>
         <section class="desc">{{{desc}}}</section>
         <a href="#" class="read-on">Show more...</a>
@@ -86,25 +87,16 @@
           <h2>About David</h2>
           <section id="bio">
             <p>
-              Born in California against his will, David came into the world as the youngest of three boys. When David was a mere 8 months old his family moved to Salem, Oregon. An almost native Oregonian, David grew up with a love of gardening, cooking, and tinkering with all things technology. 
-            </p>
-            <p>
-              Upon entrance to Oregon State University to study Computer Science, he joined both his brothers in the tradition of entering their state college. The grandsons of coal miners from Appalachia, these three boys were the first to go to college in their family. Having always found education easy David found settling on an educational direction a tad bit harder, and after his Junior year, and two changes in majors, he left with the youthful belief he would make “good money” in the tech industry; David started his career as an IT contractor. 
-            </p>
-            <p>  
-              David spent his 20s inquisitively moving through life. Like a bull-terrier of research, David’s passions grew during this decade to include civil liberties, fly-fishing, camping, and hacking hardware. Being perennially broke, his passion for technological advancement was fueled by the hacker mindset. Making due with cast offs and old cheap parts David utilized the then-obscure operating system Linux to fuel his work. Linux would become the backbone of his home networks, sparking his interest in internet technologies.
-            </p>
-            <p>  
-              In his 30s David had the auspicious luck to marry a teacher. Due to her experience in education, she saw in David learning differences which had not been identified when he was younger. Within the first year of marriage David was diagnosed with Attention Deficit Disorder. It was revolutionary. It meant that an array of new information, tools, and tactics were available for David to learn and work. He also started a job an Zones Inc., located in Portland, where his long tenure allowed him to develop tremendous organization and self-direction skills. 
-            </p>
-            <p>  
-              Understanding his own neurodiversity allowed David to understand his history, family, and creative passions in a whole new way. In 2016, David made the decision to go back to school at the Portland branch of Code Fellows for full-stack web development. Having coded as a hobby since he was in grade school, he had always loved getting lost in a beautiful problem, and finding an elegant solution. Code school, with lots of coffee, was little short of heaven for David. Before even exiting the program, he was asked to become both an associate instructor and teaching assistant at the school. He has been on staff at Code Fellows, now Alchemy Code Labs, on and off since graduation. 
-            </p>
-            <p>  
-              David’s passions are now a robust cacophony of questions and creation. He is a true Polymath of the IT world, knowing the ins and outs of software and hardware, servers and coding, and more. When asked which he prefers, his true answer is merely “Yes”, yes he loves it all. David loves to work collaboratively, and holds his ideas with little ego, and a willingness to share. He enjoys learning from others, and sharing his knowledge in return. 
-            </p>
-            <p> 
-              David lives in Portland Oregon with his wife Andrea, his favorite dog Junie, and two ornery cats Rose and Vera. He can be found most days tinkering, hacking, and dreaming up an either brilliant or utterly absurd solution to important and mundane problems alike. An unassuming persona when you meet him in person, David’s character and kindness are best discerned with time, or occasionally a little whiskey. 
+              A motivated full-stack JavaScript developer with more than 20 years experience in IT, 
+              I have been programming since my teens. I started learning JavaScript in 2009 in order 
+              to create a PC Inventory Tracking System in my technology support position at Zones. 
+              Streamlining my work through web applications motivated me to study JavaScript full-time 
+              in 2016 at Code Fellows in Portland OR. A constant learner, I continue to use my 
+              experience in system administration and IT to inform my software development. 
+              Dedicated to creating efficient user interfaces and experiences, I focus on test-driven 
+              development to create simple elegant code. I thrive on contributing to a positive and 
+              co-operative work environment, and would like to bring my talent, skills and ambition 
+              to a great company.
             </p>
           </section>
           
@@ -118,7 +110,7 @@
     
     <footer class="content-width center-content">
       <a href="https://github.com/goodwid/goodwin-portfolio">Github repo for this site</a> | 
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTzk75FkCTHAI-HSpDeNTsDc2Uput8d_QeUB7QvcCcEW7rS_TXSayF1jiYwK13YOPz-OCz5z0kianSu/pub">My Resume</a>
+      <a href="https://docs.google.com/document/d/e/2PACX-1vS2pROT8eCIZO2g1pI7xjNGYd9d14nyJJ01QKjWn0OKd6XHYvAQHvjODKkTLlPcB7UJcxW3a9OKjlPC/pub">My Resume</a>
     </footer>
     <script src="lib/jquery-2.2.3.min.js"></script>
     <script src="lib/handlebars-latest.js"></script>

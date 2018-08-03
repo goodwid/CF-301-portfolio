@@ -15,7 +15,7 @@
 
   // sorts data and instantiates Project objects into Project.all array.
   Project.loadAll = function (rawData) {
-    rawData.sort((a,b) => new Date(b.completedOn) - new Date(a.completedOn));
+    rawData.sort((a,b) => a.order - b.order);
     Project.all = rawData.map(el => new Project(el));
   };
 
