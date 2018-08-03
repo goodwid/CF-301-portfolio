@@ -33,7 +33,7 @@
     "image":      "images/rossellestudios.png",
     "category":   "project",
     "order":      "1",
-    "desc":       "<p>Artist website for my wife, Andrea Rosselle.</p><p>Presenting images from her current and past art shows in a custom jQuery MVC slideshow.</p><p>Users can select image sets by show.</p>"
+    "desc":       "<p>Artist website for Andrea Rosselle.</p><p>Presenting images from her current and past art shows in a custom jQuery MVC slideshow.</p><p>Users can select image sets by show.</p>"
   },
   {
     "title":      "Adventure Game",
