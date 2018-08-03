@@ -6,7 +6,7 @@
     "image":      "images/bikeit.png",
     "category":   "classwork",
     "order":      "20",
-    "desc":       "<p>Biker-centric weather app, polls WeatherUnderground API for location-based weather forecasts/updates.</p><p>jQuery MVC single-page app</p>"
+    "desc":       "<p>Biker-centric weather app, polls WeatherUnderground API for location-based weather forecasts/updates.</p><p>jQuery MVC single-page app.</p>"
   },
   {
     "title":      "Conference Connect",
@@ -51,7 +51,7 @@
     "image":      "images/homeautomation.png",
     "category":   "project",
     "order":      "30",
-    "desc":       "<p>Custom home automation server</p><p>MEAN stack app, communicating with ESP8266 devices running Espruino to control household appliances.</p><p>No public access yet.</p>"
+    "desc":       "<p>Custom home automation server.</p><p>MEAN stack app, communicating with ESP8266 devices running Espruino to control household appliances.</p><p>No public access yet.</p>"
   },
   {
     "title":      "Piecing Me Together",
